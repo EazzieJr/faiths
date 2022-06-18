@@ -1,67 +1,117 @@
 <template>
-  <section class="certifications px-6 md:px-[3.35vw] border-color border-t relative ">
-      <div class="certifications-container border-color border-l pl-6 md:pl-[3.35vw] pt-16 md:pt-[8.3vw] pb-[13.4vw]">
-        <div class="top">
-          <h2 class="relative">
-            certifications
-            <span class="inline-block absolute top-0 -translate-y-1/2 w-[2rem] lg:w-[4vw] ml-[1vw]">
-              <Asterisk />
-            </span>
-          </h2>
-        </div>
-
-        <div class="bottom mt-10 md:mt-[2.2vw] start-start space-x-[7vw] lg:space-x-[10vw]">
-          <div class="texts space-y-20 md:space-y-[9.92vw] md:mt-[8.92vw] md:max-w-[42vw]">
-            {certificates.map((certificate, index) => {
-              return (
-                <div
-                  key={certificate.id}
-                  class="certificate start-start space-x-4 md:space-x-[1.675vw]"
-                >
-                  {darkMode === true ? (
-                    <img
-                      class="w-5 md:w-[1.6vw] filter invert"
-                      src={Unfocused}
-                      alt=""
-                    />
-                  ) : (
-                    <img class="w-5 md:w-[1.6vw]" src={Unfocused} alt="" />
-                  )}
-
-                  <div class="texts">
-                    <h4>{certificate.title}</h4>
-
-                    <p class="post font-sans text-xs md:text-[1.06vw] md:leading-[1.8vw]">
-                      {certificate.organisation}
-                    </p>
-
-                    <p class="year font-sans text-[10px] md:text-[0.93vw] md:leading-[1.6vw]">
-                      {certificate.year}
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-
-          <div class="images hidden sm:block sticky top-[20vw]">
-            <img class="w-[27vw]" src={StackedImages} alt="" />
-          </div>
-        </div>
+  <section
+    class="certifications px-6 md:px-[3.35vw] border-color border-t relative"
+  >
+    <div
+      class="certifications-container border-color border-l pl-6 md:pl-[3.35vw] pt-16 md:pt-[8.3vw] pb-[13.4vw]"
+    >
+      <div class="top">
+        <h2 class="relative">
+          certifications
+          <span
+            class="inline-block absolute top-0 -translate-y-1/2 w-[2rem] lg:w-[4vw] ml-[1vw]"
+          >
+            <Asterisk />
+          </span>
+        </h2>
       </div>
 
-      <div class="absolute right-[10.81vw] top-[56.3vw] w-10 lg:w-[2.71vw] rotate-45">
-        <StarIcon />
+      <div
+        class="bottom mt-10 md:mt-[2.2vw] start-start space-x-[7vw] lg:space-x-[10vw]"
+      >
+        <div
+          class="texts space-y-20 md:space-y-[9.92vw] md:mt-[8.92vw] md:max-w-[42vw]"
+        >
+          <div
+            v-for="certificate in certificates"
+            :key="certificate.id"
+            class="certificate start-start space-x-4 md:space-x-[1.675vw]"
+          >
+            <img
+              class="w-5 md:w-[1.6vw]"
+              :class="[darkMode ? 'filter invert' : '']"
+              src="svg/unfocused.svg"
+              alt=""
+            />
+
+            <div class="texts">
+              <h4>{{ certificate.title }}</h4>
+
+              <p
+                class="post font-sans text-xs md:text-[1.06vw] md:leading-[1.8vw]"
+              >
+                {{ certificate.organisation }}
+              </p>
+
+              <p
+                class="year font-sans text-[10px] md:text-[0.93vw] md:leading-[1.6vw]"
+              >
+                {{ certificate.year }}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="images hidden sm:block sticky top-[20vw]">
+          <img class="w-[27vw]" src="svg/stacked-images.svg" alt="" />
+        </div>
       </div>
-    </section>
+    </div>
+
+    <div
+      class="absolute right-[10.81vw] top-[56.3vw] w-10 lg:w-[2.71vw] rotate-45"
+    >
+      <StarIcon />
+    </div>
+  </section>
 </template>
 
 <script>
 export default {
-  
-}
+  data() {
+    return {
+      // darkMode: true,
+      certificates: [
+        {
+          title: "Associate Chief of Staff",
+          organisation: "The Chief of Staff Association",
+          year: "2022",
+          id: 0,
+        },
+        {
+          title: "Product Analytics Micro-Certification (PAC)™",
+          organisation: "Product School",
+          year: "2022",
+          id: 1,
+        },
+        {
+          title: "How to Achieve Product Market Fit",
+          organisation: "Product School",
+          year: "2022",
+          id: 2,
+        },
+        {
+          title: "Enterprise Design Thinking Practitioner",
+          organisation: "IBM",
+          year: "2022",
+          id: 3,
+        },
+        {
+          title: "How to Build Digital Product",
+          organisation: "Product School",
+          year: "2021",
+          id: 4,
+        },
+        {
+          title: "Basic Digital Skills Training",
+          organisation: "Google",
+          year: "2018",
+          id: 5,
+        },
+      ],
+    };
+  },
+};
 </script>
 
-<style>
-
-</style>
+<style></style>
