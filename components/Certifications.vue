@@ -58,7 +58,7 @@
 export default {
   data() {
     return {
-      // darkMode: true,
+      darkMode: false,
       certificates: [
         {
           title: "Associate Chief of Staff",
