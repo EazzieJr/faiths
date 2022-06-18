@@ -15,14 +15,13 @@
           data-cursor="-sm"
           data-magnetic
         >
-          <span class="first-letter:capitalize text-xl md:text-[2.13vw]"
-            >{{ social.name }}</span
-          >
+          <span class="first-letter:capitalize text-xl md:text-[2.13vw]">{{
+            social.name
+          }}</span>
           <span class="w-8 md:min-w-[3.6vw]">
-            <img src="svg/arrow.svg" alt="">
+            <img src="svg/arrow.svg" alt="" />
           </span>
         </a>
-
       </div>
 
       <div
@@ -37,10 +36,8 @@
       </div>
     </div>
 
-    <div class="px-6 border-t start py-8 md:px-[3.35vw] md:pt-[3.8vw] md:pb-[3.2vw] border-color">
-      <p class="font-sans text-[10px] lg:text-[0.93vw] md:leading-[1.6vw] uppercase">
-        Designed AT CENTURY LEAP
-      </p>
+    <div class="copyright">
+      <p>Designed AT CENTURY LEAP</p>
     </div>
   </div>
 </template>
@@ -61,4 +58,12 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="postcss" scoped>
+.copyright {
+  @apply px-6 border-t start py-8 md:px-[3.35vw] md:pt-[3.8vw] md:pb-[3.2vw] border-color;
+
+  p {
+    @apply font-sans text-[10px] lg:text-[0.93vw] md:leading-[1.6vw] uppercase;
+  }
+}
+</style>
