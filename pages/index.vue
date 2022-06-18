@@ -1,5 +1,14 @@
 <template>
   <div>
+    <div class="flex items-start justify-start border-[#333333] border-t">
+        <!-- <div className="w-[86.78vw] border-color border-r">
+          <Work />
+
+          <Showcase />
+        </div> -->
+
+        <WorkStickybar />
+      </div>
     <Certifications />
     <Footer />
   </div>
