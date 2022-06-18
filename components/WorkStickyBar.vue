@@ -1,18 +1,16 @@
 <template>
-  <div class="mx-auto">
-    <div class="sticky right-0 mx-auto top-11 h-auto pt-6 md:pt-[3.35vw]">
-      <div class="logo inline-flex items-center col-center md:flex-row">
-        <img class="w-8 lg:w-[3.8vw]" src="images/logo.png" alt="" />
+  <div class="sticky right-0 mx-auto top-11 h-auto pt-6 md:pt-[3.35vw]">
+    <div class="logo inline-flex items-center col-center md:flex-row">
+      <img class="w-8 lg:w-[3.8vw]" src="images/logo.png" alt="" />
 
-        <p>
-          <span>faith</span> <br />
-          <span>olaniyi</span>
-        </p>
-      </div>
+      <p>
+        <span>faith</span> <br />
+        <span>olaniyi</span>
+      </p>
+    </div>
 
-      <div class="rotate-90 center my-10 md:my-[6.8vw]">
-        <img src="svg/arrow-icon.svg" class="w-12 md:w-[7.7vw]" />
-      </div>
+    <div class="rotate-90 center my-10 md:my-[6.8vw]">
+      <img src="svg/arrow-icon.svg" class="w-12 md:w-[7.7vw]" />
     </div>
   </div>
 </template>
