@@ -7,7 +7,7 @@
           <Showcase />
         </div> -->
 
-        <WorkStickybar />
+        <WorkStickyBar />
       </div>
     <Certifications />
     <Footer />
