@@ -22,7 +22,7 @@
         </div>
 
         <div
-          class="end md:between space-x-5 text-right md:space-x-[2.7vw] text-[10px] md:text-[0.95vw] font-light"
+          class="end w-full md:w-auto md:between space-x-5 text-right md:space-x-[2.7vw] text-[10px] md:text-[0.95vw] font-light"
           data-cursor="-sm -opaque"
           data-cursor-stick="#asterisk"
         >
@@ -87,7 +87,7 @@
               </p>
             </div>
             <img
-              src="{ShowcaseImage1}"
+              src="images/spicy.jpg"
               alt="Spicy"
               class="h-full w-full object-cover object-left-top"
             />
