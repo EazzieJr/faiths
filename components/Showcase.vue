@@ -17,7 +17,7 @@
           </span>
 
           <span class="ml-10 w-6 md:w-[2.3vw] h-auto center">
-            <ArrowIcon />
+            <img src="svg/arrow-icon.svg" alt="">
           </span>
         </div>
 
@@ -33,7 +33,7 @@
             id="asterisk"
             data-magnetic
           >
-            <Asterisk class="w-3 md:w-[1.1vw]" />
+            <img src="svg/asterisk.svg" class="w-3 md:w-[1.1vw]" />
           </span>
 
           <span class="inline-block">2022</span>

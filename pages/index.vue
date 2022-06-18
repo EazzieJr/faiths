@@ -7,7 +7,7 @@
           <Showcase />
         </div>
 
-        <WorkStickyBar class="w-[23.]" />
+        <WorkStickyBar />
       </div>
     <Certifications />
     <Footer />
