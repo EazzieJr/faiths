@@ -28,8 +28,8 @@ module.exports = {
         '4xbody': '12.5rem'
       },
       backgroundImage: {
-        'black-hero-star': "url('~/src/svg/hero-star-black.svg')",
-        'white-hero-star': "url('~/src/svg/hero-star-white.svg')"
+        'black-hero-star': "url('/svg/hero-star-black.svg')",
+        'white-hero-star': "url('/svg/hero-star-white.svg')"
       }
     },
   },

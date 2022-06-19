@@ -1,5 +1,7 @@
 <template>
   <div>
+    <Hero />
+    
     <WorkHeader />
 
     <div class="flex items-start justify-start border-[#333333] border-t">
