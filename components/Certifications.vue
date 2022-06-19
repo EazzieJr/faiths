@@ -13,45 +13,51 @@
       <div class="bottom start-start">
         <div class="texts">
           <Certificate
+            src="focused"
             title="Associate Chief of Staff"
             organisation="The Chief of Staff Association"
             year="2022"
           />
           <Certificate
+            src="unfocused"
             title="Product Analytics Micro-Certification (PAC)™"
             organisation="Product School"
             year="2022"
           />
           <Certificate
+            src="unfocused"
             title="How to Achieve Product Market Fit"
             organisation="Product School"
             year="2022"
           />
           <Certificate
+            src="unfocused"
             title="Enterprise Design Thinking Practitioner"
             organisation="IBM"
             year="2022"
           />
           <Certificate
+            src="unfocused"
             title="How to Build Digital Product"
             organisation="Product School"
             year="2021"
           />
           <Certificate
+            src="unfocused"
             title="Basic Digital Skills Training"
             organisation="Google"
             year="2018"
           />
         </div>
 
-        <div class="images hidden sm:block sticky top-[20vw]">
+        <div class="images hidden sm:block sticky top-[10vw]">
           <img class="w-[27vw]" src="svg/stacked-images.svg" alt="" />
         </div>
       </div>
     </div>
 
     <div class="image">
-      <img src="svg/staricon.svg" alt="" />
+      <img class="dark:invert" src="svg/staricon.svg" alt="" />
     </div>
   </section>
 </template>
