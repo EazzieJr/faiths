@@ -1,6 +1,6 @@
 <template>
-  <section class="certifications">
-    <div class="certifications-container">
+  <section class="certifications border-color">
+    <div class="certifications-container border-color">
       <div class="top">
         <h2 class="relative">
           certifications
@@ -10,7 +10,7 @@
         </h2>
       </div>
 
-      <div class="bottom">
+      <div class="bottom start-start ">
         <div class="texts">
           <div
             v-for="certificate in certificates"
@@ -104,10 +104,10 @@ export default {
 
 <style lang="postcss" scoped>
 .certifications {
-  @apply px-6 md:px-[3.35vw] border-color border-t relative;
+  @apply px-6 md:px-[3.35vw] border-t relative;
 
   > .certifications-container {
-    @apply border-color border-l pl-6 md:pl-[3.35vw] pt-16 md:pt-[8.3vw] pb-[13.4vw];
+    @apply border-l pl-6 md:pl-[3.35vw] pt-16 md:pt-[8.3vw] pb-[13.4vw];
 
     > .top {
       span {
@@ -116,7 +116,7 @@ export default {
     }
 
     > .bottom {
-      @apply mt-10 md:mt-[2.2vw] start-start space-x-[7vw] lg:space-x-[10vw];
+      @apply mt-10 md:mt-[2.2vw] space-x-[7vw] lg:space-x-[10vw];
 
       > .texts {
         @apply space-y-20 md:space-y-[9.92vw] md:mt-[8.92vw] md:max-w-[42vw];

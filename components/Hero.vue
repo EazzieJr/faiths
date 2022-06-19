@@ -1,6 +1,6 @@
 <template>
-  <section class="hero">
-    <nav>
+  <section class="hero border-color">
+    <nav class="border-color">
       <div class="nav-container">
         <div class="logo">
           <img class="w-8 lg:w-[3.8vw]" src="images/logo.png" alt="" />
@@ -40,7 +40,7 @@
       </div>
     </nav>
 
-    <div class="hero-container">
+    <div class="hero-container border-color">
       <div class="top-hero">
         <div class="top-hero-container">
           <div class="top-hero-contents">
@@ -140,10 +140,10 @@ export default {};
 
 <style lang="postcss" scoped>
 .hero {
-  @apply border-color pl-6 md:pl-[3.35vw];
+  @apply pl-6 md:pl-[3.35vw];
 
   nav {
-    @apply border-color border-r;
+    @apply border-r;
 
     > .nav-container {
       @apply between py-5 md:py-[1.4vw];
@@ -167,7 +167,7 @@ export default {};
   }
 
   > .hero-container {
-    @apply border-color border-r pb-6 md:pb-[3.35vw];
+    @apply border-r pb-6 md:pb-[3.35vw];
 
     > .top-hero {
       @apply sm:h-screen pb-40 sm:pb-0;
