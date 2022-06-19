@@ -2,36 +2,36 @@
   <footer>
     <div class="footer-container">
       <div class="top-left">
-        <h2>SOCIALS</h2>
+        <h2 data-cursor="-opaque">SOCIALS</h2>
 
         <a
-          v-for="social in socials"
-          :key="social.name"
+          v-for="(social) in socials"
+          :key="social.index"
           href="/"
           class="max-w-fit start space-x-4 md:space-x-[1.675vw]"
-          data-cursor="-sm"
+          data-cursor="-sm -exclusion"
           data-magnetic
         >
           <span class="social-name">{{ social.name }}</span>
 
           <span class="w-8 md:min-w-[3.6vw]">
-            <img src="svg/arrow.svg" alt="" />
+            <img class="dark:invert" src="svg/arrow.svg" alt="" />
           </span>
         </a>
       </div>
 
       <div class="connect">
-        <p>
+        <p data-cursor="-exclusion">
           Connect with me
           <br />
           via mail at <br />
-          <a href="mailto: faith.olaniyi@gmail.com">Faith.olaniyi@gmail.com</a>
+          <a data-cursor="-sm" href="mailto: faith.olaniyi@gmail.com">Faith.olaniyi@gmail.com</a>
         </p>
       </div>
     </div>
 
     <div class="copyright">
-      <p>Designed AT CENTURY LEAP</p>
+      <a href="https://centuryleap.com" data-cursor="-sm -opaque">Designed AT CENTURY LEAP</a>
     </div>
   </footer>
 </template>

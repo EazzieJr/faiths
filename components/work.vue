@@ -118,7 +118,7 @@ export default {
   data() {
     return {
       position: 0,
-      images: ["spak", "second", "third", "fourth", "dummy  1", "dummy 2"],
+      images: ["spak", "second", "third", "fourth", "dummy"],
     };
   },
   mounted() {

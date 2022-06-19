@@ -19,7 +19,11 @@
   }
 
   body {
-    @apply bg-white dark:bg-[#0B0B0B] text-[#111111] dark:text-white;
+    @apply bg-white dark:bg-[#0B0B0B] text-[#111111] dark:text-white cursor-none;
+  }
+
+  a {
+    @apply cursor-none
   }
 
   @font-face {
