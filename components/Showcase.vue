@@ -17,7 +17,7 @@
           </span>
 
           <span class="ml-10 w-6 md:w-[2.3vw] h-auto center">
-            <img src="svg/arrow-icon.svg" alt="">
+            <img src="svg/arrow-icon.svg" alt="" />
           </span>
         </div>
 
@@ -33,7 +33,7 @@
             id="asterisk"
             data-magnetic
           >
-            <img src="svg/asterisk.svg" class="w-3 md:w-[1.1vw]" />
+            <img src="svg/asterisk.svg" class="dark:invert w-3 md:w-[1.1vw]" />
           </span>
 
           <span class="inline-block">2022</span>
@@ -94,7 +94,7 @@
           </div>
 
           <div
-            class="container-decoy bg-[#CDFFCC] h-[40vh] min-h-[20rem] md:h-[34vw] w-full sm:w-[67.06%] relative"
+            class="container-decoy h-[40vh] min-h-[20rem] md:h-[34vw] w-full sm:w-[67.06%] relative"
           >
             <div
               class="absolute text-decoy text-left top-4 left-4 md:top-[1.67vw] md:left-[1.67vw] z-10"
@@ -113,6 +113,12 @@
                 2018
               </p>
             </div>
+
+              <img
+                src="images/drone.png"
+                alt="Spicy"
+                class="h-full w-full object-cover object-left-top"
+              />
           </div>
         </div>
       </div>
@@ -131,8 +137,8 @@ export default {};
   }
 }
 
-
-.text-decoy, img {
+.text-decoy,
+img {
   transition: 400ms;
   -webkit-transition: 400ms;
   -moz-transition: 400ms;
@@ -149,7 +155,7 @@ export default {};
 }
 
 .container-decoy:hover {
-  @apply hover:scale-[0.96]
+  @apply hover:scale-[0.96];
 }
 
 .container-decoy:hover .text-decoy {
