@@ -39,7 +39,7 @@
             class="px-6 md:ml-[3.35vw] md:pl-0 lg:pr-0 sticky top-[25%] xl:top-[12.5%] sm:max-w-[39.94vw] md:max-w-none md:w-[40vw] md:z-20"
           >
             <img
-              src="images/dummy.png"
+              :src="`images/work/${images[position]}.png`"
               alt=""
               class="w-full max-w-[350px] sm:max-w-[100%] md:max-w-none md:w-[40vw] mx-auto md:mx-0"
             />
@@ -48,52 +48,41 @@
           <div
             class="col-center -mt-[70%] sm:-mt-[35%] md:-mt-[42vw] z-10 relative md:space-y-[13.3vw]"
           >
-            <div
-              v-for="(experience, id) in experiences"
-              :key="experience.id"
-              class="experience w-full between -ml-12 md:-ml-[6.7vw] mb-[70%] md:mb-0 last:mb-[25%] sm:last:mb-[12.5%] md:last:pb-[10vw]"
-            >
-              <div class="">
-                <p
-                  class="text-xs lg:text-lg center w-6 md:w-[3.35vw] -rotate-90 font-light tracking-[0.23em]"
-                >
-                  0.{{ id + 1 }}
-                </p>
-              </div>
-
-              <div
-                class="h-full w-full text-right sm:max-w-[37.53vw] lg:sm:max-w-[33.35vw] overflow-hidden"
-              >
-                <h3
-                  data-aos="fade-up"
-                  data-aos-duration="1000"
-                  data-aos-anchor-placement="top-top"
-                  class="font-kugile text-xl sm:text-2xl md:text-[2.65vw] leading-10 md:leading-normal"
-                >
-                  {{ experience.company }}
-                </h3>
-
-                <p
-                  data-aos="fade-left"
-                  data-aos-duration="1000"
-                  data-aos-delay="200"
-                  data-aos-anchor-placement="top-top"
-                  class="explainer font-light"
-                >
-                  {{ experience.role }}
-                </p>
-
-                <p
-                  data-aos="fade-left"
-                  data-aos-duration="1000"
-                  data-aos-delay="300"
-                  data-aos-anchor-placement="top-top"
-                  class="explainer font-light"
-                >
-                  {{ experience.year }}
-                </p>
-              </div>
-            </div>
+            <Project
+              class="spak"
+              id="0.1"
+              company="Spak.Africa"
+              role="president and founder"
+              year="2022"
+            />
+            <Project
+              class="oea"
+              id="0.2"
+              company="SPECIAL ADVISER TO ONDO STATE GOVT & CEO OF ONDO STATE ENTREPRENEURSHIP AGENCY"
+              role="special assistant"
+              year="2021"
+            />
+            <Project
+              class="aye"
+              id="0.3"
+              company="AFRICA’S YOUNG ENTREPRENEURS"
+              role="chief of staff"
+              year="2021"
+            />
+            <Project
+              class="abi"
+              id="0.4"
+              company="AFRICA BLOCKCHAIN INSTITUTE"
+              role="Executive Assistant"
+              year="2021"
+            />
+            <Project
+              class="ci"
+              id="0.5"
+              company="CYCLEBREEZE INNOVATIONS"
+              role="Business, Product and Growth Lead"
+              year="2018"
+            />
           </div>
         </div>
 
@@ -121,77 +110,97 @@
 <script>
 import gsap from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { TextPlugin } from "gsap/TextPlugin"
-gsap.registerPlugin(ScrollTrigger, TextPlugin)
+import { TextPlugin } from "gsap/TextPlugin";
+import Project from "./Project.vue";
+gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
 export default {
   data() {
     return {
-      experiences: [
-        {
-          company: "Spak.Africa",
-          role: "president and founder",
-          year: "2022",
-          id: 0,
-        },
-        {
-          company:
-            "SPECIAL ADVISER TO ONDO STATE GOVT & CEO OF ONDO STATE ENTREPRENEURSHIP AGENCY",
-          role: "special assistant",
-          year: "2021",
-          id: 1,
-        },
-        {
-          company: "AFRICA’S YOUNG ENTREPRENEURS",
-          role: "chief of staff",
-          year: "2021",
-          id: 2,
-        },
-        {
-          company: "AFRICA BLOCKCHAIN INSTITUTE",
-          role: "Executive Assistant",
-          year: "2021",
-          id: 3,
-        },
-        {
-          company: "CYCLEBREEZE INNOVATIONS",
-          role: "Business, Product and Growth Lead",
-          year: "2018",
-          id: 4,
-        },
-      ],
+      position: 0,
+      images: ["spak", "second", "third", "fourth"],
     };
   },
-
   mounted() {
-    gsap.to(".experience", {
+    gsap.to(".oea", {
       scrollTrigger: {
-        trigger: ".experience",
-        start: "center center",
-        scrub: true,
-        markers: true,
-        anticipatePin: 1
+        trigger: ".oea",
+        start: "center 90%",
+        end: "center 89%",
+        scrub: 1,
+        // markers: true,
+        onEnter: () => {
+          this.position = 1
+        },
+        onEnterBack: () => {
+          this.position = 0
+        },
       },
-      opacity: 1,
-      onComplete: ScrollTrigger.refresh()
-    })
-    
-    ScrollTrigger.refresh();
+    });
+
+     gsap.to(".aye", {
+      scrollTrigger: {
+        trigger: ".aye",
+        start: "center 90%",
+        end: "center 89%",
+        scrub: 1,
+        // markers: true,
+        onEnter: () => {
+          this.position = 2
+        },
+        onEnterBack: () => {
+          this.position = 1
+        },
+      },
+     });
+
+     gsap.to(".abi", {
+      scrollTrigger: {
+        trigger: ".abi",
+        start: "center 90%",
+        end: "center 89%",
+        scrub: 1,
+        // markers: true,
+        onEnter: () => {
+          this.position = 3
+        },
+        onEnterBack: () => {
+          this.position = 2
+        },
+      },
+     });
+
+    gsap.to(".ci", {
+      scrollTrigger: {
+        trigger: ".ci",
+        start: "center 90%",
+        end: "center 89%",
+        scrub: 1,
+        // markers: true,
+        onEnter: () => {
+          this.position = 4
+        },
+        onEnterBack: () => {
+          this.position = 3
+        },
+      },
+    });
+
     gsap.to(".success-text", {
       scrollTrigger: {
         trigger: ".success-text",
         start: "bottom 90%",
         end: "bottom bottom",
-        markers: true,
+        // markers: true,
         toggleActions: "play none none restart",
       },
       text: {
         value: "I am very acquainted with success",
       },
-
       duration: 2,
     });
   },
+  components: { Project },
 };
 </script>
 

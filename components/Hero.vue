@@ -154,62 +154,62 @@ export default {
     ...mapMutations(["toggleDarkMode"]),
 
     heroAnimate() {
-      const tl = gsap.timeline({ ease: "power3.out" });
-      tl.to(
-        ".big-hero .first, .big-hero .second, .big-hero .third, .big-hero .fourth",
-        {
-          y: 0,
-          duration: 1,
-          delay: 1,
-          stagger: 0.1,
-          ease: "ease out",
-        }
-      ).to(".write-in", {
-        text: {
-          value: "Consistency in growth, perfection in sustainability.",
-        },
+      // const tl = gsap.timeline({ ease: "power3.out" });
+      // tl.to(
+      //   ".big-hero .first, .big-hero .second, .big-hero .third, .big-hero .fourth",
+      //   {
+      //     y: 0,
+      //     duration: 1,
+      //     delay: 1,
+      //     stagger: 0.1,
+      //     ease: "ease out",
+      //   }
+      // ).to(".write-in", {
+      //   text: {
+      //     value: "Consistency in growth, perfection in sustainability.",
+      //   },
 
-        duration: 2,
-        opacity: 1,
-        // onComplete: () => {
-        //   ScrollTrigger.refresh();
-        // },
-      });
+      //   duration: 2,
+      //   opacity: 1,
+      //   // onComplete: () => {
+      //   //   ScrollTrigger.refresh();
+      //   // },
+      // });
 
-      const scroll = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".hero-pin-image img",
-          start: "center center",
-          scrub: 1,
-          pin: ".bottom-hero",
-          anticipatePin: -1,
-          markers: true,
-        },
-        duration: 5,
-      });
+      // const scroll = gsap.timeline({
+      //   scrollTrigger: {
+      //     trigger: ".hero-pin-image img",
+      //     start: "center center",
+      //     scrub: 1,
+      //     pin: ".bottom-hero",
+      //     anticipatePin: -1,
+      //     markers: true,
+      //   },
+      //   duration: 5,
+      // });
 
-      scroll.to(".texts-big p", {
-        text: {
-          value: `Faith Olaniyi is a creative generalist specialized in
-              <span style="font-weight: 900;">product and business management</span
-              >. He is an atypical thinker and problem solver who constantly
-              generates innovative solutions to complex problems. He prides
-              himself as a prolific technological management strategist,
-              recognized for diverse experiences across varieties of industries.
-              <br /><br />
-              Faith is a seasoned Chief of Staff and a member of the Chief of
-              Staff association in the US. His resourcefulness and expertise
-              gives him an edge in ensuring impeccable result. He has about six
-              years of profound exposure in strategic planning, process
-              optimization, business system building, business development,
-              product and project management gained from across private, public,
-              regional & international platforms.`,
-        },
+      // scroll.to(".texts-big p", {
+      //   text: {
+      //     value: `Faith Olaniyi is a creative generalist specialized in
+      //         <span style="font-weight: 900;">product and business management</span
+      //         >. He is an atypical thinker and problem solver who constantly
+      //         generates innovative solutions to complex problems. He prides
+      //         himself as a prolific technological management strategist,
+      //         recognized for diverse experiences across varieties of industries.
+      //         <br /><br />
+      //         Faith is a seasoned Chief of Staff and a member of the Chief of
+      //         Staff association in the US. His resourcefulness and expertise
+      //         gives him an edge in ensuring impeccable result. He has about six
+      //         years of profound exposure in strategic planning, process
+      //         optimization, business system building, business development,
+      //         product and project management gained from across private, public,
+      //         regional & international platforms.`,
+      //   },
 
-        delay: -5,
-        duration: 5,
-        // onComplete: () => { ScrollTrigger.refresh() }
-      });
+      //   delay: -5,
+      //   duration: 5,
+      //   // onComplete: () => { ScrollTrigger.refresh() }
+      // });
     },
 
     toggleMode() {
