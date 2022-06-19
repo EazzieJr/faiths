@@ -99,7 +99,7 @@
 
         <div class="end pr-[9vw]">
           <div class="w-[5.7vw]">
-            <img src="svg/detailed-star.svg" alt="" />
+            <img class="dark:invert" src="svg/detailed-star.svg" alt="" />
           </div>
         </div>
       </div>
@@ -111,7 +111,7 @@
         </span>
 
         <span class="ml-10 w-6 md:w-[2.3vw] h-auto center">
-          <img src="svg/arrow-icon.svg" alt="" />
+          <img class="dark:invert" src="svg/arrow-icon.svg" alt="" />
         </span>
       </div>
     </div>
