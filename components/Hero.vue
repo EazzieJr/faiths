@@ -71,7 +71,7 @@
               </div>
 
               <p class="explainer write-in font-light opacity-0">
-                Consistency in growth, perfection in sustainability. */}
+                
               </p>
             </div>
 
@@ -135,7 +135,84 @@
 </template>
 
 <script>
-export default {};
+import { gsap } from "gsap";
+import { TextPlugin } from "gsap/TextPlugin";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(TextPlugin, ScrollTrigger);
+
+export default {
+  methods: {
+    heroAnimate() {
+      const tl = gsap.timeline({ ease: "power3.out" });
+      tl.to(
+        ".big-hero .first, .big-hero .second, .big-hero .third, .big-hero .fourth",
+        {
+          y: 0,
+          duration: 1,
+          stagger: 0.1,
+          ease: "ease out",
+        }
+      ).to(".write-in", {
+        text: {
+          value: "Consistency in growth, perfection in sustainability.",
+        },
+
+        duration: 2,
+        opacity: 1,
+        onComplete: () => {
+          ScrollTrigger.refresh();
+        },
+      });
+
+      // const scroll = gsap.timeline({
+      //   scrollTrigger: {
+      //     trigger: ".bottom-hero-container",
+      //     start: "center center",
+      //     scrub: true,
+      //     pin: true,
+      //     anticipatePin: 1,
+      //     // markers: true,
+      //   },
+      //   duration: 5,
+      // });
+
+      // scroll
+      //   .to(".texts-image .first-text", {
+      //     text: {
+      //       value: `Faith Olaniyi is a creative generalist specialized in 
+      //           <span className="font-extrabold" style="font-weight: 900">product and business management</span>. He is an
+      //           atypical thinker and problem solver who constantly generates innovative solutions to
+      //           complex problems. He prides himself as a prolific technological management
+      //           strategist, recognized for diverse experiences across varieties of industries.`,
+      //     },
+
+      //     delay: -5,
+      //     duration: 5,
+      //   })
+
+      //   .to(".texts-image .second-text", {
+      //     text: {
+      //       value: `Faith is a seasoned Chief of Staff and a member of the Chief of Staff association in
+      //           the US. His resourcefulness and expertise gives him an edge in ensuring impeccable
+      //           result. He has about six years of profound exposure in strategic planning, process
+      //           optimization, business system building, business development, product and project
+      //           management gained from across private, public, regional & international platforms.`,
+      //     },
+
+      //     // delay: -1,
+      //     duration: 5,
+      //     onComplete: scroll.scrollTrigger.refresh(),
+      //   });
+
+      // scroll.scrollTrigger.refresh();
+      // ScrollTrigger.refresh();
+    },
+  },
+
+  mounted() {
+    this.heroAnimate()
+  }
+};
 </script>
 
 <style lang="postcss" scoped>
