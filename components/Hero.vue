@@ -1,24 +1,18 @@
 <template>
-  <section class="hero border-color pl-6 md:pl-[3.35vw]">
-    <nav class="border-color border-r">
-      <div class="nav-container between py-5 md:py-[1.4vw]">
-        <div class="logo inline-flex items-center">
+  <section class="hero">
+    <nav>
+      <div class="nav-container">
+        <div class="logo">
           <img class="w-8 lg:w-[3.8vw]" src="images/logo.png" alt="" />
 
-          <p
-            class="uppercase font-sans inline-block text-[10px] lg:text-[1.06vw] font-extrabold pl-0.5 md:leading-[1.25vw]"
-          >
-            Faith <br> olaniyi
+          <p>
+            Faith <br />
+            olaniyi
           </p>
         </div>
 
-        <div
-          class="right-container start space-x-7 lg:space-x-[2.12vw] pr-2.5 md:pr-[0.66vw]"
-        >
-          <p
-            data-magnetic
-            class="resume uppercase inline-flex space-x-1 lg:space-x-[0.28vw]"
-          >
+        <div class="right-container">
+          <p data-magnetic class="resume">
             <span class="text-[10px] lg:text-[1.06vw]">resume</span>
 
             <svg
@@ -34,11 +28,13 @@
                 stroke-width="1"
               />
             </svg>
-            <!-- <span><img class="w-10 h-10" src="svg/arrow.svg" alt="" /></span> */} -->
           </p>
 
-          <button class="w-5 lg:w-[1.7vw]" onClick="{toggleMode}">
-            <img :src="darkMode ? 'svg/light-theme.svg' : 'svg/dark-theme.svg'" class="theme-button w-5 lg:w-[1.7vw]" />
+          <button class="w-5 lg:w-[1.7vw]" @click="toggleMode">
+            <img
+              :src="darkMode ? 'svg/light-theme.svg' : 'svg/dark-theme.svg'"
+              class="theme-button w-5 lg:w-[1.7vw]"
+            />
           </button>
         </div>
       </div>
@@ -51,13 +47,13 @@
             class="pt-20 md:pt-[9vw] h-full top-hero-contents md:flex items-start"
           >
             <div class="text overflow-hidden hero-text">
-               <!-- Hero headder for 650px downwards -->
+              <!-- Hero headder for 650px downwards -->
               <h1 class="relative md:hidden small-h1">
                 founder & CEO, CHIEF OF STAFF, CREAtIVE SPECIALIST, BUSINESS
                 STRATEGIST
               </h1>
 
-               <!-- Hero headder for 768px upwards -->
+              <!-- Hero headder for 768px upwards -->
               <div
                 data-cursor="-opaque"
                 class="big-hero relative hidden md:block"
@@ -71,20 +67,16 @@
                 </div>
 
                 <div class="overflow-hidden">
-                  <h1 class="third translate-y-[20vw]">
-                    CREAtIVE SPECIALIST,
-                  </h1>
+                  <h1 class="third translate-y-[20vw]">CREAtIVE SPECIALIST,</h1>
                 </div>
 
                 <div class="overflow-hidden">
-                  <h1 class="fourth translate-y-[20vw]">
-                    BUSINESS STRATEGIST
-                  </h1>
+                  <h1 class="fourth translate-y-[20vw]">BUSINESS STRATEGIST</h1>
                 </div>
               </div>
 
               <p class="explainer write-in font-light opacity-0">
-                 Consistency in growth, perfection in sustainability. */}
+                Consistency in growth, perfection in sustainability. */}
               </p>
             </div>
 
@@ -108,9 +100,8 @@
               class="explainer md:pr-[20vw] lg:pr-0 first-text"
               data-cursor="-exclusion"
             >
-               Faith Olaniyi is a creative generalist specialized in
-              <span class="font-extrabold"
-                >product and business management</span
+              Faith Olaniyi is a creative generalist specialized in
+              <span class="font-extrabold">product and business management</span
               >. He is an atypical thinker and problem solver who constantly
               generates innovative solutions to complex problems. He prides
               himself as a prolific technological management strategist,
@@ -119,7 +110,7 @@
 
             <div class="image center md:end lg:hidden">
               <img
-                class="w-full max-w-[350px] md:max-w-[400px] "
+                class="w-full max-w-[350px] md:max-w-[400px]"
                 src="images/faith.png"
                 alt=""
               />
@@ -129,8 +120,8 @@
               class="explainer md:pr-[20vw] lg:pr-0 second-text"
               data-cursor="-exclusion"
             >
-               Faith is a seasoned Chief of Staff and a member of the Chief
-              of Staff association in the US. His resourcefulness and expertise
+              Faith is a seasoned Chief of Staff and a member of the Chief of
+              Staff association in the US. His resourcefulness and expertise
               gives him an edge in ensuring impeccable result. He has about six
               years of profound exposure in strategic planning, process
               optimization, business system building, business development,
@@ -151,12 +142,40 @@
 </template>
 
 <script>
-export default {
-};
+export default {};
 </script>
 
 <style lang="postcss" scoped>
-.big-hero::after, .small-h1::after {
+.hero {
+  @apply border-color pl-6 md:pl-[3.35vw];
+
+  nav {
+    @apply border-color border-r;
+
+    > .nav-container {
+      @apply between py-5 md:py-[1.4vw];
+
+      > .logo {
+        @apply inline-flex items-center;
+
+        p {
+          @apply uppercase font-sans inline-block text-[10px] lg:text-[1.06vw] font-extrabold pl-0.5 md:leading-[1.25vw];
+        }
+      }
+
+      > .right-container {
+        @apply start space-x-7 lg:space-x-[2.12vw] pr-2.5 md:pr-[0.66vw];
+
+        > .resume {
+          @apply uppercase inline-flex space-x-1 lg:space-x-[0.28vw];
+        }
+      }
+    }
+  }
+}
+
+.big-hero::after,
+.small-h1::after {
   content: "";
   position: absolute;
   left: 0;
@@ -170,17 +189,17 @@ export default {
 } */
 
 .bottom-hero-container {
-  @apply md:flex justify-between items-center xl:items-start
+  @apply md:flex justify-between items-center xl:items-start;
 }
 
 .texts-image {
-  @apply xl:pt-[5vw]
+  @apply xl:pt-[5vw];
 }
 
 .invert {
   filter: invert(1);
   -webkit-filter: invert(1);
-} 
+}
 
 .return {
   transform: translate(0px 0px) !important;

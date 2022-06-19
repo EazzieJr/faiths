@@ -3,7 +3,7 @@ export const state = () => ({
 })
 
 export const mutations = {
-  setDarkMode(state) {
+  toggleDarkMode(state) {
     state.darkMode = !state.darkMode
   }
 }
