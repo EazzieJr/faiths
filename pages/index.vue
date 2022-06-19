@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="flex border-color border-b">
-      <Hero />
+      <Hero class="md:min-w-[96.65vw]" />
 
       <ScrollDown />
     </div>
@@ -23,9 +23,11 @@
 </template>
 
 <script>
+import aosMixin from "~/mixins/aos";
 import Certifications from "../components/Certifications.vue";
 export default {
   name: "IndexPage",
+  mixins: [aosMixin],
   components: { Certifications },
 };
 </script>

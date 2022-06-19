@@ -32,7 +32,7 @@
 
           <button class="w-5 lg:w-[1.7vw]" @click="toggleMode">
             <img
-              :src="darkMode ? 'svg/light-theme.svg' : 'svg/dark-theme.svg'"
+              :src="[darkMode ? 'svg/light-theme.svg' : 'svg/dark-theme.svg']"
               class="theme-button w-5 lg:w-[1.7vw]"
             />
           </button>
@@ -70,9 +70,7 @@
                 </div>
               </div>
 
-              <p class="explainer write-in font-light opacity-0">
-                
-              </p>
+              <p class="explainer write-in font-light opacity-0"></p>
             </div>
 
             <div class="image-pin image end">
@@ -88,7 +86,9 @@
 
       <div class="bottom-hero pt-[2vw]">
         <div class="bottom-hero-container pr-6 md:pr-[3.35vw]">
-          <div class="texts-image space-y-6 md:space-y-[1.6vw] lg:pr-[5vw]">
+          <div
+            class="texts-image-small lg:hidden space-y-6 md:space-y-[1.6vw] lg:pr-[5vw]"
+          >
             <p
               class="explainer md:pr-[20vw] lg:pr-0 first-text"
               data-cursor="-exclusion"
@@ -123,6 +123,10 @@
             </p>
           </div>
 
+          <div class="texts-big hidden lg:block lg:pt-[5vw] lg:pr-[5vw]">
+            <p class="explainer pr-0" data-cursor="-exclusion"></p>
+          </div>
+
           <div
             class="image hidden lg:block md:w-2/5 lg:min-w-[40vw] hero-pin-image"
           >
@@ -138,10 +142,17 @@
 import { gsap } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { mapState, mapMutations } from "vuex";
 gsap.registerPlugin(TextPlugin, ScrollTrigger);
 
 export default {
+  computed: {
+    ...mapState(["darkMode"]),
+  },
+
   methods: {
+    ...mapMutations(["toggleDarkMode"]),
+
     heroAnimate() {
       const tl = gsap.timeline({ ease: "power3.out" });
       tl.to(
@@ -149,6 +160,7 @@ export default {
         {
           y: 0,
           duration: 1,
+          delay: 1,
           stagger: 0.1,
           ease: "ease out",
         }
@@ -159,59 +171,63 @@ export default {
 
         duration: 2,
         opacity: 1,
-        onComplete: () => {
-          ScrollTrigger.refresh();
-        },
+        // onComplete: () => {
+        //   ScrollTrigger.refresh();
+        // },
       });
 
-      // const scroll = gsap.timeline({
-      //   scrollTrigger: {
-      //     trigger: ".bottom-hero-container",
-      //     start: "center center",
-      //     scrub: true,
-      //     pin: true,
-      //     anticipatePin: 1,
-      //     // markers: true,
-      //   },
-      //   duration: 5,
-      // });
+      const scroll = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".hero-pin-image img",
+          start: "center center",
+          scrub: 1,
+          pin: ".bottom-hero",
+          anticipatePin: -1,
+          markers: true,
+        },
+        duration: 5,
+      });
 
-      // scroll
-      //   .to(".texts-image .first-text", {
-      //     text: {
-      //       value: `Faith Olaniyi is a creative generalist specialized in 
-      //           <span className="font-extrabold" style="font-weight: 900">product and business management</span>. He is an
-      //           atypical thinker and problem solver who constantly generates innovative solutions to
-      //           complex problems. He prides himself as a prolific technological management
-      //           strategist, recognized for diverse experiences across varieties of industries.`,
-      //     },
+      scroll.to(".texts-big p", {
+        text: {
+          value: `Faith Olaniyi is a creative generalist specialized in
+              <span style="font-weight: 900;">product and business management</span
+              >. He is an atypical thinker and problem solver who constantly
+              generates innovative solutions to complex problems. He prides
+              himself as a prolific technological management strategist,
+              recognized for diverse experiences across varieties of industries.
+              <br /><br />
+              Faith is a seasoned Chief of Staff and a member of the Chief of
+              Staff association in the US. His resourcefulness and expertise
+              gives him an edge in ensuring impeccable result. He has about six
+              years of profound exposure in strategic planning, process
+              optimization, business system building, business development,
+              product and project management gained from across private, public,
+              regional & international platforms.`,
+        },
 
-      //     delay: -5,
-      //     duration: 5,
-      //   })
+        delay: -5,
+        duration: 5,
+        // onComplete: () => { ScrollTrigger.refresh() }
+      });
+    },
 
-      //   .to(".texts-image .second-text", {
-      //     text: {
-      //       value: `Faith is a seasoned Chief of Staff and a member of the Chief of Staff association in
-      //           the US. His resourcefulness and expertise gives him an edge in ensuring impeccable
-      //           result. He has about six years of profound exposure in strategic planning, process
-      //           optimization, business system building, business development, product and project
-      //           management gained from across private, public, regional & international platforms.`,
-      //     },
+    toggleMode() {
+      const html = document.querySelector("html");
 
-      //     // delay: -1,
-      //     duration: 5,
-      //     onComplete: scroll.scrollTrigger.refresh(),
-      //   });
-
-      // scroll.scrollTrigger.refresh();
-      // ScrollTrigger.refresh();
+      if (this.darkMode) {
+        html.classList.remove("dark");
+        this.toggleDarkMode();
+      } else {
+        html.classList.add("dark");
+        this.toggleDarkMode();
+      }
     },
   },
 
   mounted() {
-    this.heroAnimate()
-  }
+    this.heroAnimate();
+  },
 };
 </script>
 

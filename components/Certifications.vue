@@ -55,6 +55,8 @@
 </template>
 
 <script>
+import gsap from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 export default {
   data() {
     return {
@@ -99,6 +101,11 @@ export default {
       ],
     };
   },
+
+  mounted() {
+    ScrollTrigger.refresh()
+    console.log("I am mounted")
+  }
 };
 </script>
 

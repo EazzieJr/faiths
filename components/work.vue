@@ -51,7 +51,7 @@
             <div
               v-for="(experience, id) in experiences"
               :key="experience.id"
-              class="w-full between -ml-12 md:-ml-[6.7vw] mb-[70%] md:mb-0 last:mb-[25%] sm:last:mb-[12.5%] md:last:pb-[10vw]"
+              class="experience w-full between -ml-12 md:-ml-[6.7vw] mb-[70%] md:mb-0 last:mb-[25%] sm:last:mb-[12.5%] md:last:pb-[10vw]"
             >
               <div class="">
                 <p
@@ -119,6 +119,11 @@
 </template>
 
 <script>
+import gsap from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { TextPlugin } from "gsap/TextPlugin"
+gsap.registerPlugin(ScrollTrigger, TextPlugin)
+
 export default {
   data() {
     return {
@@ -156,6 +161,36 @@ export default {
         },
       ],
     };
+  },
+
+  mounted() {
+    gsap.to(".experience", {
+      scrollTrigger: {
+        trigger: ".experience",
+        start: "center center",
+        scrub: true,
+        markers: true,
+        anticipatePin: 1
+      },
+      opacity: 1,
+      onComplete: ScrollTrigger.refresh()
+    })
+    
+    ScrollTrigger.refresh();
+    gsap.to(".success-text", {
+      scrollTrigger: {
+        trigger: ".success-text",
+        start: "bottom 90%",
+        end: "bottom bottom",
+        markers: true,
+        toggleActions: "play none none restart",
+      },
+      text: {
+        value: "I am very acquainted with success",
+      },
+
+      duration: 2,
+    });
   },
 };
 </script>
