@@ -6,10 +6,9 @@
           <img class="w-8 lg:w-[3.8vw]" src="images/logo.png" alt="" />
 
           <p
-            class="uppercase font-sans inline-block text-[10px] lg:text-[1.06vw] font-extrabold pl-0.5"
+            class="uppercase font-sans inline-block text-[10px] lg:text-[1.06vw] font-extrabold pl-0.5 md:leading-[1.25vw]"
           >
-            <span>faith</span> <br />
-            <span>olaniyi</span>
+            Faith <br> olaniyi
           </p>
         </div>
 
@@ -142,7 +141,6 @@
 
           <div
             class="image hidden lg:block md:w-2/5 lg:min-w-[40vw] hero-pin-image"
-            onClick="{ScrollTrigger.refresh}"
           >
             <img class="w-full" src="images/faith.png" alt="" />
           </div>
@@ -153,7 +151,8 @@
 </template>
 
 <script>
-export default {};
+export default {
+};
 </script>
 
 <style lang="postcss" scoped>
