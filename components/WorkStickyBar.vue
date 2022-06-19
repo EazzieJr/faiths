@@ -10,13 +10,18 @@
     </div>
 
     <div class="rotate-90 center my-10 md:my-[6.8vw]">
-      <img src="svg/arrow-icon.svg" class="w-12 md:w-[7.7vw]" />
+      <img :src="[darkMode ? 'svg/white-arrow-icon.svg' : 'svg/arrow-icon.svg']" class="w-12 md:w-[7.7vw]" />
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+import { mapState } from "vuex";
+export default {
+  computed: {
+    ...mapState(["darkMode"]),
+  },
+};
 </script>
 
 <style lang="postcss" scoped>
