@@ -3,15 +3,11 @@
     <div class="pt-16 md:pt-[8.3vw]">
       <div class="pb-4 md:pb-[1.675vw]">
         <div class="overflow-hidden">
-          <h2 data-aos="fade-up" data-aos-duration="1000">
-            Product
-          </h2>
+          <h2 data-aos="fade-up" data-aos-duration="1000">Product</h2>
         </div>
 
         <div class="overflow-hidden">
-          <h2 data-aos="fade-up" data-aos-duration="1000">
-            showcase
-          </h2>
+          <h2 data-aos="fade-up" data-aos-duration="1000">showcase</h2>
         </div>
       </div>
 
@@ -19,8 +15,9 @@
         class="col-between md:between gap-6 text-sm font-light mb-6 md:mb-[3.35vw]"
       >
         <div class="start space-x-6 sm:space-x-10">
-          <span class="products-text text-[10px] md:text-[0.95vw] font-light uppercase">
-            
+          <span
+            class="products-text text-[10px] md:text-[0.95vw] font-light uppercase"
+          >
           </span>
 
           <span class="ml-10 w-6 md:w-[2.3vw] h-auto center">
@@ -51,6 +48,7 @@
         class="col-between space-y-6 md:space-y-[1.675vw] mb-[7.8125rem] text-[#111111] dark:text-[#111111]"
       >
         <div
+          data-cursor-text="view project"
           class="container-decoy w-full h-[50vh] min-h-[20rem] md:h-[39vw] relative bg-[#CDFFCC]"
         >
           <div class="p-6 text-decoy md:p-[3.35vw]">
@@ -74,6 +72,7 @@
           class="w-full col-between sm:between space-y-4 sm:space-y-0 sm:space-x-[1.675vw]"
         >
           <div
+            data-cursor-text="view project"
             class="container-decoy bg-[#CDFFCC] h-[40vh] min-h-[20rem] md:h-[34vw] w-full sm:w-[32.94%] duration-500 relative"
           >
             <div
@@ -101,6 +100,7 @@
           </div>
 
           <div
+            data-cursor-text="view project"
             class="container-decoy h-[40vh] min-h-[20rem] md:h-[34vw] w-full sm:w-[67.06%] relative"
           >
             <div
@@ -121,11 +121,11 @@
               </p>
             </div>
 
-              <img
-                src="images/drone.png"
-                alt="Spicy"
-                class="h-full w-full object-cover object-left-top"
-              />
+            <img
+              src="images/drone.png"
+              alt="Spicy"
+              class="h-full w-full object-cover object-left-top"
+            />
           </div>
         </div>
       </div>
@@ -154,7 +154,7 @@ export default {
       },
       duration: 2,
     });
-  }
+  },
 };
 </script>
 

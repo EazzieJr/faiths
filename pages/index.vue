@@ -23,11 +23,16 @@
 </template>
 
 <script>
+import Cursor from '~/js/cursor.js'
 import aosMixin from "~/mixins/aos";
 import Certifications from "../components/Certifications.vue";
 export default {
   name: "IndexPage",
   mixins: [aosMixin],
   components: { Certifications },
+
+  mounted() {
+    new Cursor();
+  }
 };
 </script>
