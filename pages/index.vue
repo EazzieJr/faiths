@@ -5,7 +5,7 @@
 
       <ScrollDown />
     </div>
-    
+
     <WorkHeader />
 
     <div class="flex items-start justify-start border-[#333333] border-t">
@@ -23,7 +23,9 @@
 </template>
 
 <script>
-import Cursor from '~/js/cursor.js'
+import $ from 'jquery';
+import Cursor from "~/js/cursor.js";
+import Magnetic from "~/js/magnetic.js";
 import aosMixin from "~/mixins/aos";
 import Certifications from "../components/Certifications.vue";
 export default {
@@ -33,6 +35,10 @@ export default {
 
   mounted() {
     new Cursor();
-  }
+    new Magnetic();
+    $("[data-magnetic]").each(function () {
+      new Magnetic(this);
+    });
+  },
 };
 </script>
