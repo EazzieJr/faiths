@@ -1,6 +1,10 @@
 <template>
   <div>
-    <Hero />
+    <div class="flex border-color border-b">
+      <Hero />
+
+      <ScrollDown />
+    </div>
     
     <WorkHeader />
 

@@ -1,5 +1,5 @@
 <template>
-  <section class="hero border-color border-b px-6 md:px-[3.35vw]">
+  <section class="hero border-color pl-6 md:pl-[3.35vw]">
     <nav class="border-color border-r">
       <div class="nav-container between py-5 md:py-[1.4vw]">
         <div class="logo inline-flex items-center">
@@ -109,14 +109,13 @@
               class="explainer md:pr-[20vw] lg:pr-0 first-text"
               data-cursor="-exclusion"
             >
-               Faith Olaniyi is a creative generalist specialized in{" "}
+               Faith Olaniyi is a creative generalist specialized in
               <span class="font-extrabold"
                 >product and business management</span
               >. He is an atypical thinker and problem solver who constantly
               generates innovative solutions to complex problems. He prides
               himself as a prolific technological management strategist,
               recognized for diverse experiences across varieties of industries.
-              */}
             </p>
 
             <div class="image center md:end lg:hidden">
@@ -137,7 +136,7 @@
               years of profound exposure in strategic planning, process
               optimization, business system building, business development,
               product and project management gained from across private, public,
-              regional & international platforms. */}
+              regional & international platforms.
             </p>
           </div>
 
