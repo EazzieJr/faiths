@@ -5,41 +5,19 @@
         <h2 class="relative">
           certifications
           <span>
-            <img src="svg/asterisk.svg" alt="" />
+            <img class="dark:invert" src="svg/asterisk.svg" alt="" />
           </span>
         </h2>
       </div>
 
       <div class="bottom start-start ">
         <div class="texts">
-          <div
-            v-for="certificate in certificates"
-            :key="certificate.id"
-            class="certificate start-start space-x-4 md:space-x-[1.675vw]"
-          >
-            <img
-              class="w-5 md:w-[1.6vw]"
-              :class="[darkMode ? 'filter invert' : '']"
-              src="svg/unfocused.svg"
-              alt=""
-            />
-
-            <div class="texts">
-              <h4>{{ certificate.title }}</h4>
-
-              <p
-                class="post font-sans text-xs md:text-[1.06vw] md:leading-[1.8vw]"
-              >
-                {{ certificate.organisation }}
-              </p>
-
-              <p
-                class="year font-sans text-[10px] md:text-[0.93vw] md:leading-[1.6vw]"
-              >
-                {{ certificate.year }}
-              </p>
-            </div>
-          </div>
+          <Certificate title="Associate Chief of Staff" organisation="The Chief of Staff Association" year="2022" />
+          <Certificate title="Product Analytics Micro-Certification (PAC)™" organisation="Product School" year="2022" />
+          <Certificate title="How to Achieve Product Market Fit" organisation="Product School" year="2022" />
+          <Certificate title="Enterprise Design Thinking Practitioner" organisation="IBM" year="2022" />
+          <Certificate title="How to Build Digital Product" organisation="Product School" year="2021" />
+          <Certificate title="Basic Digital Skills Training" organisation="Google" year="2018" />
         </div>
 
         <div class="images hidden sm:block sticky top-[20vw]">
@@ -57,55 +35,13 @@
 <script>
 import gsap from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Certificate from "./Certificate.vue";
 export default {
-  data() {
-    return {
-      darkMode: false,
-      certificates: [
-        {
-          title: "Associate Chief of Staff",
-          organisation: "The Chief of Staff Association",
-          year: "2022",
-          id: 0,
-        },
-        {
-          title: "Product Analytics Micro-Certification (PAC)™",
-          organisation: "Product School",
-          year: "2022",
-          id: 1,
-        },
-        {
-          title: "How to Achieve Product Market Fit",
-          organisation: "Product School",
-          year: "2022",
-          id: 2,
-        },
-        {
-          title: "Enterprise Design Thinking Practitioner",
-          organisation: "IBM",
-          year: "2022",
-          id: 3,
-        },
-        {
-          title: "How to Build Digital Product",
-          organisation: "Product School",
-          year: "2021",
-          id: 4,
-        },
-        {
-          title: "Basic Digital Skills Training",
-          organisation: "Google",
-          year: "2018",
-          id: 5,
-        },
-      ],
-    };
-  },
-
-  mounted() {
-    ScrollTrigger.refresh()
-    console.log("I am mounted")
-  }
+    mounted() {
+        ScrollTrigger.refresh();
+        console.log("I am mounted");
+    },
+    components: { Certificate }
 };
 </script>
 
