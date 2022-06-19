@@ -40,12 +40,10 @@
       </div>
     </nav>
 
-    <div class="hero-container border-color border-r pb-6 md:pb-[3.35vw]">
-      <div class="top-hero sm:h-screen pb-40 sm:pb-0">
-        <div class="top-hero-container h-full">
-          <div
-            class="pt-20 md:pt-[9vw] h-full top-hero-contents md:flex items-start"
-          >
+    <div class="hero-container">
+      <div class="top-hero">
+        <div class="top-hero-container">
+          <div class="top-hero-contents">
             <div class="text overflow-hidden hero-text">
               <!-- Hero headder for 650px downwards -->
               <h1 class="relative md:hidden small-h1">
@@ -54,10 +52,7 @@
               </h1>
 
               <!-- Hero headder for 768px upwards -->
-              <div
-                data-cursor="-opaque"
-                class="big-hero relative hidden md:block"
-              >
+              <div data-cursor="-opaque" class="big-hero">
                 <div class="overflow-hidden">
                   <h1 class="first translate-y-[20vw]">founder & CEO,</h1>
                 </div>
@@ -80,9 +75,7 @@
               </p>
             </div>
 
-            <div
-              class="image-pin image end mt-[10vh] sm:-mt-[30vh] mr-5 md:mr-10 -ml-[11.5vw] md:mt-[2vh] z-50"
-            >
+            <div class="image-pin image end">
               <img
                 class="circlular-hero w-28 md:min-w-[12vw]"
                 src="{circularHero}"
@@ -168,6 +161,30 @@ export default {};
 
         > .resume {
           @apply uppercase inline-flex space-x-1 lg:space-x-[0.28vw];
+        }
+      }
+    }
+  }
+
+  > .hero-container {
+    @apply border-color border-r pb-6 md:pb-[3.35vw];
+
+    > .top-hero {
+      @apply sm:h-screen pb-40 sm:pb-0;
+
+      > .top-hero-container {
+        @apply h-full;
+        > .top-hero-contents {
+          @apply md:flex items-start pt-20 md:pt-[9vw] h-full;
+          > .hero-texts {
+            > .big-hero {
+              @apply relative hidden md:block;
+            }
+          }
+
+          > .image-pin {
+            @apply mt-[10vh] sm:-mt-[30vh] mr-5 md:mr-10 -ml-[11.5vw] md:mt-[2vh] z-50;
+          }
         }
       }
     }
