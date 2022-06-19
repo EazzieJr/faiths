@@ -2,22 +2,29 @@
   <div class="px-6 lg:px-[3.35vw]">
     <div class="pt-16 md:pt-[8.3vw]">
       <div class="pb-4 md:pb-[1.675vw]">
-        <h2 class="">
-          Product <br />
-          showcase
-        </h2>
+        <div class="overflow-hidden">
+          <h2 data-aos="fade-up" data-aos-duration="1000">
+            Product
+          </h2>
+        </div>
+
+        <div class="overflow-hidden">
+          <h2 data-aos="fade-up" data-aos-duration="1000">
+            showcase
+          </h2>
+        </div>
       </div>
 
       <div
         class="col-between md:between gap-6 text-sm font-light mb-6 md:mb-[3.35vw]"
       >
         <div class="start space-x-6 sm:space-x-10">
-          <span class="text-[10px] md:text-[0.95vw] font-light uppercase">
-            here are some of the products i’ve lead, shipped and ideated
+          <span class="products-text text-[10px] md:text-[0.95vw] font-light uppercase">
+            
           </span>
 
           <span class="ml-10 w-6 md:w-[2.3vw] h-auto center">
-            <img src="svg/arrow-icon.svg" alt="" />
+            <img class="dark:invert" src="svg/arrow-icon.svg" alt="" />
           </span>
         </div>
 
@@ -127,7 +134,28 @@
 </template>
 
 <script>
-export default {};
+import gsap from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { TextPlugin } from "gsap/TextPlugin";
+gsap.registerPlugin(ScrollTrigger, TextPlugin);
+
+export default {
+  mounted() {
+    gsap.to(".products-text", {
+      scrollTrigger: {
+        trigger: ".products-text",
+        start: "bottom bottom",
+        end: "bottom bottom",
+        markers: true,
+        toggleActions: "play none none reset",
+      },
+      text: {
+        value: "here are some of the products i’ve lead, shipped and ideated",
+      },
+      duration: 2,
+    });
+  }
+};
 </script>
 
 <style lang="postcss" scoped>
@@ -155,7 +183,7 @@ img {
 }
 
 .container-decoy:hover {
-  @apply hover:scale-[0.96];
+  @apply hover:scale-[0.97];
 }
 
 .container-decoy:hover .text-decoy {

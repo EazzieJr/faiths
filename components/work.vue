@@ -118,7 +118,7 @@ export default {
   data() {
     return {
       position: 0,
-      images: ["spak", "second", "third", "fourth"],
+      images: ["spak", "second", "third", "fourth", "dummy  1", "dummy 2"],
     };
   },
   mounted() {
@@ -189,10 +189,10 @@ export default {
     gsap.to(".success-text", {
       scrollTrigger: {
         trigger: ".success-text",
-        start: "bottom 90%",
+        start: "bottom bottom",
         end: "bottom bottom",
-        // markers: true,
-        toggleActions: "play none none restart",
+        markers: true,
+        toggleActions: "play none none reset",
       },
       text: {
         value: "I am very acquainted with success",

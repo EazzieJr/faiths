@@ -10,14 +10,38 @@
         </h2>
       </div>
 
-      <div class="bottom start-start ">
+      <div class="bottom start-start">
         <div class="texts">
-          <Certificate title="Associate Chief of Staff" organisation="The Chief of Staff Association" year="2022" />
-          <Certificate title="Product Analytics Micro-Certification (PAC)™" organisation="Product School" year="2022" />
-          <Certificate title="How to Achieve Product Market Fit" organisation="Product School" year="2022" />
-          <Certificate title="Enterprise Design Thinking Practitioner" organisation="IBM" year="2022" />
-          <Certificate title="How to Build Digital Product" organisation="Product School" year="2021" />
-          <Certificate title="Basic Digital Skills Training" organisation="Google" year="2018" />
+          <Certificate
+            title="Associate Chief of Staff"
+            organisation="The Chief of Staff Association"
+            year="2022"
+          />
+          <Certificate
+            title="Product Analytics Micro-Certification (PAC)™"
+            organisation="Product School"
+            year="2022"
+          />
+          <Certificate
+            title="How to Achieve Product Market Fit"
+            organisation="Product School"
+            year="2022"
+          />
+          <Certificate
+            title="Enterprise Design Thinking Practitioner"
+            organisation="IBM"
+            year="2022"
+          />
+          <Certificate
+            title="How to Build Digital Product"
+            organisation="Product School"
+            year="2021"
+          />
+          <Certificate
+            title="Basic Digital Skills Training"
+            organisation="Google"
+            year="2018"
+          />
         </div>
 
         <div class="images hidden sm:block sticky top-[20vw]">
@@ -37,11 +61,11 @@ import gsap from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Certificate from "./Certificate.vue";
 export default {
-    mounted() {
-        ScrollTrigger.refresh();
-        console.log("I am mounted");
-    },
-    components: { Certificate }
+  mounted() {
+    ScrollTrigger.refresh();
+    console.log("I am mounted");
+  },
+  components: { Certificate },
 };
 </script>
 
