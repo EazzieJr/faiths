@@ -33,10 +33,18 @@ import Magnetic from "~/js/magnetic.js";
 import aosMixin from "~/mixins/aos";
 import Certifications from "../components/Certifications.vue";
 import Loader from '../components/Loader.vue';
+import { mapState, mapMutations } from 'vuex';
+
 export default {
   name: "IndexPage",
   mixins: [aosMixin],
   components: { Certifications, Loader },
+
+    
+  computed: {
+    ...mapState(["loading"]),
+  },
+
 
   mounted() {
     new Cursor();
