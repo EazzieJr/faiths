@@ -130,15 +130,9 @@
           </div>
 
           <div
-          data-cursor="-exclusion -lg"
+          data-cursor="-exclusion -xl"
             class="relative image hidden lg:block md:w-2/5 lg:min-w-[40vw] hero-pin-image overflow-hidden"
           >
-            <!-- <img
-              src="images/faith.png"
-              class="clip-cursor fixed bg-white dark:bg-black z-50"
-            /> -->
-
-            <div class="clipp w-10 h-10 bg-red-600 absolute z-50"></div>
             <img class="w-full invert" src="images/faith.png" alt="" />
           </div>
         </div>
