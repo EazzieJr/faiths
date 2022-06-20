@@ -1,5 +1,5 @@
 <template>
-  <section class="hero border-color">
+  <section class="hero border-color relative">
     <nav class="border-color">
       <div class="nav-container">
         <div class="logo">
@@ -52,7 +52,10 @@
               </h1>
 
               <!-- Hero headder for 768px upwards -->
-              <div data-cursor="-opaque" class="big-hero relative hidden md:block border">
+              <div
+                data-cursor="-opaque"
+                class="big-hero relative hidden md:block"
+              >
                 <div class="overflow-hidden">
                   <h1 class="first translate-y-[20vw]">founder & CEO,</h1>
                 </div>
@@ -130,13 +133,13 @@
           <div
             class="relative image hidden lg:block md:w-2/5 lg:min-w-[40vw] hero-pin-image overflow-hidden"
           >
-            <!-- <img
+            <img
               src="images/faith.png"
-              class="clip-cursor absolute bg-white dark:bg-black z-50"
-            /> -->
+              class="clip-cursor fixed bg-white dark:bg-black z-50"
+            />
 
-            <div class="clipp w-10 h-10 bg-red-600 absolute"></div>
-            <img class="w-full " src="images/faith.png" alt="" />
+            <!-- <div class="clipp w-10 h-10 bg-red-600 absolute z-50"></div> -->
+            <img class="w-full" src="images/faith.png" alt="" />
           </div>
         </div>
       </div>
@@ -149,10 +152,8 @@ import { gsap } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { mapState, mapMutations } from "vuex";
-//  
-
-
 gsap.registerPlugin(TextPlugin, ScrollTrigger);
+let ClipCursor;
 
 export default {
   computed: {
@@ -230,9 +231,11 @@ export default {
     },
   },
 
-  mounted() {
-    this.heroAnimate();
-  },
+  // async mounted() {
+  //   ClipCursor = (await import("~/js/clipCursor")).default;
+  //   new ClipCursor(document.querySelector(".clip-cursor"));
+  //   this.heroAnimate();
+  // },
 };
 </script>
 
