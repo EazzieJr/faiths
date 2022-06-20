@@ -44,7 +44,7 @@
       <div class="top-hero">
         <div class="top-hero-container">
           <div class="top-hero-contents">
-            <div class="text overflow-hidden hero-text">
+            <div class="text hero-text">
               <!-- Hero headder for 650px downwards -->
               <h1 class="relative md:hidden small-h1">
                 founder & CEO, CHIEF OF STAFF, CREAtIVE SPECIALIST, BUSINESS
@@ -52,7 +52,7 @@
               </h1>
 
               <!-- Hero headder for 768px upwards -->
-              <div data-cursor="-opaque" class="big-hero hidden md:block">
+              <div data-cursor="-opaque" class="big-hero relative hidden md:block border">
                 <div class="overflow-hidden">
                   <h1 class="first translate-y-[20vw]">founder & CEO,</h1>
                 </div>
@@ -84,7 +84,7 @@
         </div>
       </div>
 
-      <div class="bottom-hero pt-[2vw]">
+      <div class="bottom-hero pt-[2vw] md:pt-[5vh]">
         <div class="bottom-hero-container pr-6 md:pr-[3.35vw]">
           <div
             class="texts-image-small lg:hidden space-y-6 md:space-y-[1.6vw] lg:pr-[5vw]"
@@ -150,6 +150,7 @@ import { TextPlugin } from "gsap/TextPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { mapState, mapMutations } from "vuex";
 //  
+
 
 gsap.registerPlugin(TextPlugin, ScrollTrigger);
 
@@ -273,11 +274,11 @@ export default {
         @apply h-full;
         > .top-hero-contents {
           @apply md:flex items-start pt-20 md:pt-[9vw] h-full;
-          > .hero-texts {
+          /* > .hero-texts {
             > .big-hero {
-              @apply relative hidden md:block;
+              @apply hidden md:block;
             }
-          }
+          } */
 
           > .image-pin {
             @apply mt-[10vh] sm:-mt-[30vh] mr-5 md:mr-10 -ml-[11.5vw] md:mt-[2vh] z-50;
@@ -294,7 +295,7 @@ export default {
   position: absolute;
   left: 0;
   @apply bg-contain bg-center bg-no-repeat;
-  @apply -bottom-40 md:-bottom-[12vw] w-14 h-14 md:w-[3.3vw] md:h-[3.3vw] left-6 bg-black-hero-star dark:bg-white-hero-star;
+  @apply -bottom-40 md:-bottom-[10vw] w-14 h-14 md:w-[3.3vw] md:h-[3.3vw] left-6 md:left-0 bg-black-hero-star dark:bg-white-hero-star;
 }
 
 /* .explainer {
