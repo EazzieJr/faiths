@@ -62,6 +62,17 @@
     }
   }
 
+  &.-reveal {
+    @supports (mix-blend-mode: unset) {
+      mix-blend-mode: unset;
+    }
+     &:before {
+      @supports (mix-blend-mode: unset) {
+        background: white;
+      }
+    }
+  }
+
   &.-normal {
     mix-blend-mode: normal;
 

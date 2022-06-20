@@ -3,7 +3,8 @@ import { lerp, getMousePos } from "./utils.js";
 
 // Grab the mouse position and set it to mouse state
 let mouse = { x: 0, y: 0 };
-window.addEventListener("mousemove", (ev) => (mouse = getMousePos(ev)));
+const body = document.querySelector("body")
+body.addEventListener("mousemove", (ev) => (mouse = getMousePos(ev)));
 export default class ClipCursor {
   constructor(el) {
     // Varibles
@@ -32,71 +33,71 @@ export default class ClipCursor {
       // The window.requestAnimationFrame() method tells the browser that you wish to perform an animation and requests that the browser calls a specified function to update an animation before the next repaint. The method takes a callback as an argument to be invoked before the repaint.
       requestAnimationFrame(() => this.render());
       // Clean up function
-      window.removeEventListener("mousemove", this.onMouseMoveEv);
+      body.removeEventListener("mousemove", this.onMouseMoveEv);
     };
     // Scale cursor animation
-    window.addEventListener("mousemove", this.onMouseMoveEv);
+    body.addEventListener("mousemove", this.onMouseMoveEv);
   }
 
-  onScaleMouse() {
-    // Loop through all items
-    this.Item.forEach((link) => {
-      // If I am hovering on the item for on page load I want to scale the cursor media
-      if (link.matches(":hover")) {
-        this.setImage(link);
-        if (localStorage.theme == 'light') {
-          this.Cursor.classList.add("media-blend");
-        } else {
-          this.Cursor.classList.add("media-blend-dark");
-        }
-        this.ScaleCursor(this.Cursor.children[0], 1);
-      }
-      //On mouse enter scale the media-cursor to .8
-      link.addEventListener("mouseenter", () => {
-        this.setImage(link);
-        if (localStorage.theme == 'light') {
-          this.Cursor.classList.add("media-blend");
-        } else {
-          this.Cursor.classList.add("media-blend-dark");
-        }
-        this.ScaleCursor(this.Cursor.children[0], 1);
-      });
-      //On mouse enter scale the media-cursor to 0
-      link.addEventListener("mouseleave", () => {
-        this.Cursor.classList.remove("media-blend");
-        this.Cursor.classList.remove("media-blend-dark");
-        this.ScaleCursor(this.Cursor.children[0], 0);
-      });
-      //Hover on a tag to expand to 1.2
-      link.children[0].addEventListener("mouseenter", () => {
-        if (localStorage.theme == 'light') {
-          this.Cursor.classList.add("media-blend");
-        } else {
-          this.Cursor.classList.add("media-blend-dark");
-        }
-        this.ScaleCursor(this.Cursor.children[0], 1);
-      });
-      // Bring scale back down .8
-      link.children[0].addEventListener("mouseleave", () => {
-        // this.Cursor.classList.remove("media-blend");
-        // this.Cursor.classList.remove("media-blend-dark");
-        this.ScaleCursor(this.Cursor.children[0], 1);
-      });
+  // onScaleMouse() {
+  //   // Loop through all items
+  //   this.Item.forEach((link) => {
+  //     // If I am hovering on the item for on page load I want to scale the cursor media
+  //     if (link.matches(":hover")) {
+  //       this.setImage(link);
+  //       if (localStorage.theme == 'light') {
+  //         this.Cursor.classList.add("media-blend");
+  //       } else {
+  //         this.Cursor.classList.add("media-blend-dark");
+  //       }
+  //       this.ScaleCursor(this.Cursor.children[0], 1);
+  //     }
+  //     //On mouse enter scale the media-cursor to .8
+  //     link.addEventListener("mouseenter", () => {
+  //       this.setImage(link);
+  //       if (localStorage.theme == 'light') {
+  //         this.Cursor.classList.add("media-blend");
+  //       } else {
+  //         this.Cursor.classList.add("media-blend-dark");
+  //       }
+  //       this.ScaleCursor(this.Cursor.children[0], 1);
+  //     });
+  //     //On mouse enter scale the media-cursor to 0
+  //     link.addEventListener("mouseleave", () => {
+  //       this.Cursor.classList.remove("media-blend");
+  //       this.Cursor.classList.remove("media-blend-dark");
+  //       this.ScaleCursor(this.Cursor.children[0], 0);
+  //     });
+  //     //Hover on a tag to expand to 1.2
+  //     link.children[0].addEventListener("mouseenter", () => {
+  //       if (localStorage.theme == 'light') {
+  //         this.Cursor.classList.add("media-blend");
+  //       } else {
+  //         this.Cursor.classList.add("media-blend-dark");
+  //       }
+  //       this.ScaleCursor(this.Cursor.children[0], 1);
+  //     });
+  //     // Bring scale back down .8
+  //     link.children[0].addEventListener("mouseleave", () => {
+  //       // this.Cursor.classList.remove("media-blend");
+  //       // this.Cursor.classList.remove("media-blend-dark");
+  //       this.ScaleCursor(this.Cursor.children[0], 1);
+  //     });
 
-      // Blending
-      const inv = document.querySelector('.inv')
+  //     // Blending
+  //     const inv = document.querySelector('.inv')
 
-      inv.addEventListener('mouseenter', () => {
-        console.log('worked')
-        this.Cursor.classList.add("media-blend")
-      });
+  //     inv.addEventListener('mouseenter', () => {
+  //       console.log('worked')
+  //       this.Cursor.classList.add("media-blend")
+  //     });
 
-      inv.addEventListener('mouseleave', () => {
-        console.log('stopped')
-        inv.classList.remove("media-blend")
-      })
-    });
-  }
+  //     inv.addEventListener('mouseleave', () => {
+  //       console.log('stopped')
+  //       inv.classList.remove("media-blend")
+  //     })
+  //   });
+  // }
 
   ScaleCursor(el, amount) {
     gsap.to(el, {

@@ -128,10 +128,14 @@
           </div>
 
           <div
+            data-cursor="-reveal -lg"
             class="relative image hidden lg:block md:w-2/5 lg:min-w-[40vw] hero-pin-image overflow-hidden"
           >
-            <img src="images/faith.png" class="clip-cursor absolute bg-white dark:bg-black z-50" />
-            <img class="w-full opacity-50" src="images/faith.png" alt="" />
+            <!-- <img
+              src="images/faith.png"
+              class="clip-cursor absolute bg-white dark:bg-black z-50"
+            /> -->
+            <img class="w-full " src="images/faith.png" alt="" />
           </div>
         </div>
       </div>
@@ -144,6 +148,8 @@ import { gsap } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { mapState, mapMutations } from "vuex";
+// import ClipCursor from "~/js/clipCursor"
+
 gsap.registerPlugin(TextPlugin, ScrollTrigger);
 
 export default {
@@ -169,14 +175,12 @@ export default {
       //   text: {
       //     value: "Consistency in growth, perfection in sustainability.",
       //   },
-
       //   duration: 2,
       //   opacity: 1,
       //   // onComplete: () => {
       //   //   ScrollTrigger.refresh();
       //   // },
       // });
-
       // const scroll = gsap.timeline({
       //   scrollTrigger: {
       //     trigger: ".hero-pin-image img",
@@ -188,7 +192,6 @@ export default {
       //   },
       //   duration: 5,
       // });
-
       // scroll.to(".texts-big p", {
       //   text: {
       //     value: `Faith Olaniyi is a creative generalist specialized in
@@ -206,7 +209,6 @@ export default {
       //         product and project management gained from across private, public,
       //         regional & international platforms.`,
       //   },
-
       //   delay: -5,
       //   duration: 5,
       //   // onComplete: () => { ScrollTrigger.refresh() }
@@ -226,8 +228,22 @@ export default {
     },
   },
 
+  // beforeCreate() {
+  //   const ClipCursor = require("../js/clipCursor.js");
+  //   new ClipCursor(".clip-cursor");
+  // },
+
   mounted() {
     this.heroAnimate();
+    // new ClipCursor(".clip-cursor")
+    // var cur = document.querySelector(".hero-pin-image");
+    // let width = screen.width;
+    // let height = screen.height;
+
+    // cur.addEventListener("mousemove", (e) => {
+    //   cur.style.setProperty("--x", e.clientX - (width * 0.4) + "px");
+    //   cur.style.setProperty("--y", e.clientY + "px");
+    // });
   },
 };
 </script>
@@ -320,9 +336,12 @@ export default {
   -o-transform: translate(0px 0px) !important;
 }
 
-
-
 .clip-cursor {
-  clip-path: circle(8.5% at 50% 50%);
+  transition: 0.7s ease;
+  clip-path: circle(10% at var(--x) var(--y));
+}
+
+.hero-pin-image {
+  mix-blend-mode: multiply;
 }
 </style>
