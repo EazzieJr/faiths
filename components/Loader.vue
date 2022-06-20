@@ -1,27 +1,27 @@
 <template>
-  <div class="w-full h-screen bg-white dark:bg-[#0B0B0B] center">
-    <div class="logo">
-      <img
-        class="w-8 lg:w-[3.8vw] scale-[2] md:translate-x-[2.5vw]"
-        :src="[
-          darkMode
-            ? 'images/loader-logo-dark.png'
-            : 'images/loader-logo-white.png',
-        ]"
-        alt=""
-      />
+    <div class="w-full h-screen bg-white dark:bg-[#0B0B0B] center">
+      <div class="logo">
+        <img
+          class="w-8 lg:w-[3.8vw] scale-[2] md:translate-x-[2.5vw]"
+          :src="[
+            darkMode
+              ? 'images/loader-logo-dark.png'
+              : 'images/loader-logo-white.png',
+          ]"
+          alt=""
+        />
 
-      <div class="texts">
-        <div class="block overflow-hidden">
-          <p class="md:translate-y-[5vw]">Faith</p>
-        </div>
+        <div class="texts">
+          <div class="block overflow-hidden">
+            <p class="md:translate-y-[5vw]">Faith</p>
+          </div>
 
-        <div class="block overflow-hidden">
-          <p class="md:translate-y-[5vw]">olaniyi</p>
+          <div class="block overflow-hidden">
+            <p class="md:translate-y-[5vw]">olaniyi</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 </template>
 
 <script>
@@ -35,7 +35,7 @@ export default {
   },
 
   methods: {
-    ...mapMutations(["toggleLoading"]),
+    ...mapMutations(["toggleLoader"]),
   },
 
   mounted() {
@@ -46,7 +46,7 @@ export default {
       scale: 1,
       x: 0,
       ease: "power3.out",
-    })
+    });
 
     gsap.to("p", {
       y: 0,
@@ -54,7 +54,7 @@ export default {
       stagger: 0.1,
       duration: 1,
       ease: "power3.out",
-    })
+    });
 
     gsap.to("p", {
       y: "-5vw",
@@ -62,7 +62,7 @@ export default {
       stagger: 0.1,
       duration: 1,
       ease: "power3.in",
-    })
+    });
 
     gsap.to("img", {
       delay: 5,
@@ -70,7 +70,7 @@ export default {
       scale: 1,
       x: "2.5vw",
       ease: "power3.out",
-    })
+    });
 
     gsap.to("img", {
       delay: 5.5,
@@ -78,7 +78,10 @@ export default {
       scale: 2,
       opacity: 0,
       ease: "power3.out",
-    })
+      onComplete: () => {
+        this.toggleLoader();
+      },
+    });
   },
 };
 </script>
@@ -90,5 +93,14 @@ export default {
   p {
     @apply uppercase font-sans text-[10px] lg:text-[1.06vw] font-black pl-0.5 md:leading-[1.25vw];
   }
+}
+
+.loader-enter-active,
+.loader-leave-active {
+  transition: opacity 1s;
+}
+.loader-enter,
+.loader-leave-active {
+  opacity: 0;
 }
 </style>

@@ -52,7 +52,7 @@
               </h1>
 
               <!-- Hero headder for 768px upwards -->
-              <div data-cursor="-opaque" class="big-hero">
+              <div data-cursor="-opaque" class="big-hero hidden md:block">
                 <div class="overflow-hidden">
                   <h1 class="first translate-y-[20vw]">founder & CEO,</h1>
                 </div>
@@ -128,13 +128,14 @@
           </div>
 
           <div
-            data-cursor="-reveal -lg"
             class="relative image hidden lg:block md:w-2/5 lg:min-w-[40vw] hero-pin-image overflow-hidden"
           >
             <!-- <img
               src="images/faith.png"
               class="clip-cursor absolute bg-white dark:bg-black z-50"
             /> -->
+
+            <div class="clipp w-10 h-10 bg-red-600 absolute"></div>
             <img class="w-full " src="images/faith.png" alt="" />
           </div>
         </div>
@@ -148,7 +149,7 @@ import { gsap } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { mapState, mapMutations } from "vuex";
-// import ClipCursor from "~/js/clipCursor"
+//  
 
 gsap.registerPlugin(TextPlugin, ScrollTrigger);
 
@@ -161,26 +162,26 @@ export default {
     ...mapMutations(["toggleDarkMode"]),
 
     heroAnimate() {
-      // const tl = gsap.timeline({ ease: "power3.out" });
-      // tl.to(
-      //   ".big-hero .first, .big-hero .second, .big-hero .third, .big-hero .fourth",
-      //   {
-      //     y: 0,
-      //     duration: 1,
-      //     delay: 1,
-      //     stagger: 0.1,
-      //     ease: "ease out",
-      //   }
-      // ).to(".write-in", {
-      //   text: {
-      //     value: "Consistency in growth, perfection in sustainability.",
-      //   },
-      //   duration: 2,
-      //   opacity: 1,
-      //   // onComplete: () => {
-      //   //   ScrollTrigger.refresh();
-      //   // },
-      // });
+      const tl = gsap.timeline({ ease: "power3.out" });
+      tl.to(
+        ".big-hero .first, .big-hero .second, .big-hero .third, .big-hero .fourth",
+        {
+          y: 0,
+          duration: 1,
+          delay: 1,
+          stagger: 0.1,
+          ease: "ease out",
+        }
+      ).to(".write-in", {
+        text: {
+          value: "Consistency in growth, perfection in sustainability.",
+        },
+        duration: 2,
+        opacity: 1,
+        // onComplete: () => {
+        //   ScrollTrigger.refresh();
+        // },
+      });
       // const scroll = gsap.timeline({
       //   scrollTrigger: {
       //     trigger: ".hero-pin-image img",
@@ -228,22 +229,8 @@ export default {
     },
   },
 
-  // beforeCreate() {
-  //   const ClipCursor = require("../js/clipCursor.js");
-  //   new ClipCursor(".clip-cursor");
-  // },
-
   mounted() {
     this.heroAnimate();
-    // new ClipCursor(".clip-cursor")
-    // var cur = document.querySelector(".hero-pin-image");
-    // let width = screen.width;
-    // let height = screen.height;
-
-    // cur.addEventListener("mousemove", (e) => {
-    //   cur.style.setProperty("--x", e.clientX - (width * 0.4) + "px");
-    //   cur.style.setProperty("--y", e.clientY + "px");
-    // });
   },
 };
 </script>
