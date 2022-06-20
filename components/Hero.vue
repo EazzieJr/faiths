@@ -56,19 +56,19 @@
                 data-cursor="-opaque"
                 class="big-hero relative hidden md:block"
               >
-                <div class="overflow-hidden">
+                <div class="overflow-y-hidden">
                   <h1 class="first translate-y-[20vw]">founder & CEO,</h1>
                 </div>
 
-                <div class="overflow-hidden">
+                <div class="overflow-y-hidden">
                   <h1 class="second translate-y-[20vw]">CHIEF OF STAFF,</h1>
                 </div>
 
-                <div class="overflow-hidden">
+                <div class="overflow-y-hidden">
                   <h1 class="third translate-y-[20vw]">CREAtIVE SPECIALIST,</h1>
                 </div>
 
-                <div class="overflow-hidden">
+                <div class="overflow-y-hidden">
                   <h1 class="fourth translate-y-[20vw]">BUSINESS STRATEGIST</h1>
                 </div>
               </div>
@@ -183,9 +183,46 @@ export default {
         onComplete: () => {
           ScrollTrigger.refresh();
         },
-      });
+      }).to(".big-hero div", {
+        overflow: "visible",
+      })
 
-      // ScrollTrigger.refresh();
+      gsap.to(".big-hero .first, .big-hero .second, .big-hero .third, .big-hero .fourth", {
+        scrollTrigger: {
+          trigger: ".big-hero .first",
+          start: "top 25%",
+          endTrigger: ".big-hero",
+          end: "bottom top",
+          scrub: 2,
+          // pin: true,
+          markers: true,
+        },
+
+        x: "5vw",
+        rotateX: "90deg",
+        rotateY: "10deg",
+        duration: 3,
+        ease: "power3.out",
+      })
+
+      // gsap.to(".big-hero .second, .big-hero .fourth", {
+      //   scrollTrigger: {
+      //     trigger: ".big-hero .first",
+      //     start: "top 20%",
+      //     endTrigger: ".big-hero",
+      //     end: "bottom top",
+      //     scrub: 2,
+      //     // pin: true,
+      //     markers: true,
+      //   },
+
+      //   x: "5vw",
+      //   rotateX: "90deg",
+      //   rotateY: "10deg",
+      //   duration: 3,
+      //   ease: "power3.out",
+      // })
+
       const scroll = gsap.timeline({
         scrollTrigger: {
           trigger: ".bottom-hero",
@@ -194,19 +231,10 @@ export default {
           pin: ".bottom-hero",
           anticipatePin: -1,
           markers: false,
-          // onEnter: ({ progress, direction, isActive }) =>
-          //   console.log(progress, direction, isActive),
-          // onLeave: ({ progress, direction, isActive }) =>
-          //   {console.log(progress, direction, isActive)
-          //   if(progress === 1) {
-          //     ScrollTrigger.refresh()
-          //   }}
-          // ,
         },
-        
-
         duration: 5,
       });
+
       scroll.to(".texts-big p", {
         text: {
           value: `Faith Olaniyi is a creative generalist specialized in
@@ -226,11 +254,7 @@ export default {
         },
         delay: -5,
         duration: 5,
-        // onComplete: () => { ScrollTrigger.refresh() }
       });
-
-      // ScrollTrigger.refresh();
-      // ScrollTrigger.update();
     },
 
     toggleMode() {
@@ -349,5 +373,9 @@ export default {
 
 .hero-pin-image {
   mix-blend-mode: multiply;
+}
+
+.big-hero div {
+  perspective: 1000px;
 }
 </style>
