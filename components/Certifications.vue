@@ -13,36 +13,42 @@
       <div class="bottom start-start">
         <div class="texts">
           <Certificate
+            class="acf-fc-layout-certificate"
             src="focused"
             title="Associate Chief of Staff"
             organisation="The Chief of Staff Association"
             year="2022"
           />
           <Certificate
+            class="pam"
             src="unfocused"
             title="Product Analytics Micro-Certification (PAC)™"
             organisation="Product School"
             year="2022"
           />
           <Certificate
+            class="hap"
             src="unfocused"
             title="How to Achieve Product Market Fit"
             organisation="Product School"
             year="2022"
           />
           <Certificate
+            class="edt"
             src="unfocused"
             title="Enterprise Design Thinking Practitioner"
             organisation="IBM"
             year="2022"
           />
           <Certificate
+            class="hbd"
             src="unfocused"
             title="How to Build Digital Product"
             organisation="Product School"
             year="2021"
           />
           <Certificate
+            class="bds"
             src="unfocused"
             title="Basic Digital Skills Training"
             organisation="Google"
