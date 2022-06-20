@@ -128,9 +128,10 @@
           </div>
 
           <div
-            class="image hidden lg:block md:w-2/5 lg:min-w-[40vw] hero-pin-image"
+            class="relative image hidden lg:block md:w-2/5 lg:min-w-[40vw] hero-pin-image overflow-hidden"
           >
-            <img class="w-full" src="images/faith.png" alt="" />
+            <img src="images/faith.png" class="clip-cursor absolute bg-white dark:bg-black z-50" />
+            <img class="w-full opacity-50" src="images/faith.png" alt="" />
           </div>
         </div>
       </div>
@@ -317,5 +318,11 @@ export default {
   -moz-transform: translate(0px 0px) !important;
   -ms-transform: translate(0px 0px) !important;
   -o-transform: translate(0px 0px) !important;
+}
+
+
+
+.clip-cursor {
+  clip-path: circle(8.5% at 50% 50%);
 }
 </style>
