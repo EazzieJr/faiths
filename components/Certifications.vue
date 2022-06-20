@@ -56,8 +56,16 @@
           />
         </div>
 
-        <div class="images hidden sm:block sticky top-[10vw]">
-          <img class="w-[27vw]" src="svg/stacked-images.svg" alt="" />
+        <div class="center images hidden sm:block sticky top-[10vw]">
+          <div class="relative w-[27vw]">
+            <img
+            v-for="(image) in images"
+            :key="image.id"
+              class="absolute w-full rotate-0"
+              :src="`svg/stacked-images.svg`"
+              alt=""
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -73,6 +81,12 @@ import gsap from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Certificate from "./Certificate.vue";
 export default {
+  data() {
+    return {
+      images: ["spak", "second", "third", "fourth", "dummy"],
+    };
+  },
+
   mounted() {
     ScrollTrigger.refresh();
     console.log("I am mounted");

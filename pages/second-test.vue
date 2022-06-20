@@ -171,7 +171,7 @@ export default {
             start: 'center 55%',
             pin: true,
             scrub: 1,
-            markers: true
+            markers: false
         },
 
         duration: 1,

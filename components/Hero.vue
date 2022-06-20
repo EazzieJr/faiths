@@ -87,7 +87,7 @@
         </div>
       </div>
 
-      <div class="bottom-hero pt-[2vw] md:pt-[5vh]">
+      <div class="bottom-hero pt-[2vw]">
         <div class="bottom-hero-container pr-6 md:pr-[3.35vw]">
           <div
             class="texts-image-small lg:hidden space-y-6 md:space-y-[1.6vw] lg:pr-[5vw]"
@@ -133,10 +133,10 @@
           <div
             class="relative image hidden lg:block md:w-2/5 lg:min-w-[40vw] hero-pin-image overflow-hidden"
           >
-            <img
+            <!-- <img
               src="images/faith.png"
               class="clip-cursor fixed bg-white dark:bg-black z-50"
-            />
+            /> -->
 
             <!-- <div class="clipp w-10 h-10 bg-red-600 absolute z-50"></div> -->
             <img class="w-full" src="images/faith.png" alt="" />
@@ -180,42 +180,57 @@ export default {
         },
         duration: 2,
         opacity: 1,
-        // onComplete: () => {
-        //   ScrollTrigger.refresh();
-        // },
+        onComplete: () => {
+          ScrollTrigger.refresh();
+        },
       });
-      // const scroll = gsap.timeline({
-      //   scrollTrigger: {
-      //     trigger: ".hero-pin-image img",
-      //     start: "center center",
-      //     scrub: 1,
-      //     pin: ".bottom-hero",
-      //     anticipatePin: -1,
-      //     markers: true,
-      //   },
-      //   duration: 5,
-      // });
-      // scroll.to(".texts-big p", {
-      //   text: {
-      //     value: `Faith Olaniyi is a creative generalist specialized in
-      //         <span style="font-weight: 900;">product and business management</span
-      //         >. He is an atypical thinker and problem solver who constantly
-      //         generates innovative solutions to complex problems. He prides
-      //         himself as a prolific technological management strategist,
-      //         recognized for diverse experiences across varieties of industries.
-      //         <br /><br />
-      //         Faith is a seasoned Chief of Staff and a member of the Chief of
-      //         Staff association in the US. His resourcefulness and expertise
-      //         gives him an edge in ensuring impeccable result. He has about six
-      //         years of profound exposure in strategic planning, process
-      //         optimization, business system building, business development,
-      //         product and project management gained from across private, public,
-      //         regional & international platforms.`,
-      //   },
-      //   delay: -5,
-      //   duration: 5,
-      //   // onComplete: () => { ScrollTrigger.refresh() }
-      // });
+
+      // ScrollTrigger.refresh();
+      const scroll = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".bottom-hero",
+          start: "center center",
+          scrub: 1,
+          pin: ".bottom-hero",
+          anticipatePin: -1,
+          markers: false,
+          // onEnter: ({ progress, direction, isActive }) =>
+          //   console.log(progress, direction, isActive),
+          // onLeave: ({ progress, direction, isActive }) =>
+          //   {console.log(progress, direction, isActive)
+          //   if(progress === 1) {
+          //     ScrollTrigger.refresh()
+          //   }}
+          // ,
+        },
+        
+
+        duration: 5,
+      });
+      scroll.to(".texts-big p", {
+        text: {
+          value: `Faith Olaniyi is a creative generalist specialized in
+              <span style="font-weight: 900;">product and business management</span
+              >. He is an atypical thinker and problem solver who constantly
+              generates innovative solutions to complex problems. He prides
+              himself as a prolific technological management strategist,
+              recognized for diverse experiences across varieties of industries.
+              <br /><br />
+              Faith is a seasoned Chief of Staff and a member of the Chief of
+              Staff association in the US. His resourcefulness and expertise
+              gives him an edge in ensuring impeccable result. He has about six
+              years of profound exposure in strategic planning, process
+              optimization, business system building, business development,
+              product and project management gained from across private, public,
+              regional & international platforms.`,
+        },
+        delay: -5,
+        duration: 5,
+        // onComplete: () => { ScrollTrigger.refresh() }
+      });
+
+      // ScrollTrigger.refresh();
+      // ScrollTrigger.update();
     },
 
     toggleMode() {
@@ -231,11 +246,11 @@ export default {
     },
   },
 
-  // async mounted() {
-  //   ClipCursor = (await import("~/js/clipCursor")).default;
-  //   new ClipCursor(document.querySelector(".clip-cursor"));
-  //   this.heroAnimate();
-  // },
+  async mounted() {
+    // ClipCursor = (await import("~/js/clipCursor")).default;
+    // new ClipCursor(document.querySelector(".clip-cursor"));
+    this.heroAnimate();
+  },
 };
 </script>
 
