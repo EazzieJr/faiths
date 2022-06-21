@@ -45,9 +45,9 @@
           <div class="top-hero-contents">
             <div class="text hero-text">
               <!-- Hero headder for 650px downwards -->
-              <h1 class="relative md:hidden small-h1">
-                founder & CEO, CHIEF OF STAFF, <span>CREAtIVE SPECIALIST,</span> BUSINESS
-                STRATEGIST
+              <h1 class="relative md:hidden small-h1 opacity-0">
+                founder & CEO, CHIEF OF STAFF,
+                <span>CREAtIVE SPECIALIST,</span> BUSINESS STRATEGIST
               </h1>
 
               <!-- Hero headder for 768px upwards -->
@@ -130,7 +130,7 @@
           </div>
 
           <div
-          data-cursor="-exclusion -xl"
+            data-cursor="-exclusion -xl"
             class="relative image hidden lg:block md:w-2/5 lg:min-w-[40vw] hero-pin-image overflow-hidden"
           >
             <img class="w-full invert" src="images/faith.png" alt="" />
@@ -158,62 +158,86 @@ export default {
     ...mapMutations(["toggleDarkMode"]),
 
     heroAnimate() {
-      const tl = gsap.timeline({ ease: "power3.out" });
-      tl.to(
-        ".big-hero .first, .big-hero .second, .big-hero .third, .big-hero .fourth",
-        {
-          y: 0,
-          duration: 1,
-          delay: 1,
-          stagger: 0.1,
-          ease: "ease out",
-        }
-      ).to(".write-in", {
-        text: {
-          value: "Consistency in growth, perfection in sustainability.",
+      ScrollTrigger.matchMedia({
+        "(max-width: 767px)": function () {
+          const tl = gsap.timeline({ ease: "power3.out" });
+          tl.to(".small-h1", {
+            duration: 1.5,
+            opacity: 1,
+          }).to(".write-in", {
+              text: {
+                value: "Consistency in growth, perfection in sustainability.",
+              },
+              duration: 2,
+              opacity: 1,
+              onComplete: () => {
+                ScrollTrigger.refresh();
+              },
+            })
         },
-        duration: 2,
-        opacity: 1,
-        onComplete: () => {
-          ScrollTrigger.refresh();
-        },
-      }).to(".big-hero div", {
-        overflow: "visible",
-      })
+        
+        "(min-width: 768px)": function () {
+          const tl = gsap.timeline({ ease: "power3.out" });
+          tl.to(
+            ".big-hero .first, .big-hero .second, .big-hero .third, .big-hero .fourth",
+            {
+              y: 0,
+              duration: 1,
+              delay: 1,
+              stagger: 0.1,
+              ease: "ease out",
+            }
+          )
+            .to(".write-in", {
+              text: {
+                value: "Consistency in growth, perfection in sustainability.",
+              },
+              duration: 2,
+              opacity: 1,
+              onComplete: () => {
+                ScrollTrigger.refresh();
+              },
+            })
+            .to(".big-hero div", {
+              overflow: "visible",
+            });
 
-      gsap.to(".big-hero .first, .big-hero .second, .big-hero .third, .big-hero .fourth, .small-h1 span", {
-        scrollTrigger: {
-          trigger: ".big-hero .first",
-          start: "top 25%",
-          endTrigger: ".big-hero",
-          end: "bottom top",
-          scrub: 2,
-          // pin: true,
-          markers: false,
-        },
+          gsap.to(
+            ".big-hero .first, .big-hero .second, .big-hero .third, .big-hero .fourth, .small-h1 span",
+            {
+              scrollTrigger: {
+                trigger: ".big-hero .first",
+                start: "top 25%",
+                endTrigger: ".big-hero",
+                end: "bottom top",
+                scrub: 2,
+                // pin: true,
+                markers: false,
+              },
 
-        x: "5vw",
-        rotateX: "90deg",
-        rotateY: "10deg",
-        duration: 3,
-        ease: "power3.out",
-      })
+              x: "5vw",
+              rotateX: "90deg",
+              rotateY: "10deg",
+              duration: 3,
+              ease: "power3.out",
+            }
+          );
 
-      const scroll = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".bottom-hero",
-          start: "center center",
-          scrub: 1,
-          pin: ".bottom-hero",
-          anticipatePin: -1,
-          markers: false,
-        },
-        duration: 5,
-      });
+          const scroll = gsap.timeline({
+            scrollTrigger: {
+              trigger: ".bottom-hero",
+              start: "center center",
+              scrub: 1,
+              pin: ".bottom-hero",
+              anticipatePin: -1,
+              markers: false,
+            },
+            duration: 5,
+          });
 
-      scroll.to(".texts-big p", {
-        text: {
-          value: `Faith Olaniyi is a creative generalist specialized in
+          scroll.to(".texts-big p", {
+            text: {
+              value: `Faith Olaniyi is a creative generalist specialized in
               <span style="font-weight: 900;">product and business management</span
               >. He is an atypical thinker and problem solver who constantly
               generates innovative solutions to complex problems. He prides
@@ -227,9 +251,11 @@ export default {
               optimization, business system building, business development,
               product and project management gained from across private, public,
               regional & international platforms.`,
+            },
+            delay: -5,
+            duration: 5,
+          });
         },
-        delay: -5,
-        duration: 5,
       });
     },
 
