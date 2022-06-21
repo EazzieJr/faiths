@@ -284,6 +284,10 @@ export default {
       > .texts {
         @apply space-y-20 md:space-y-[9.92vw] md:mt-[8.92vw] md:max-w-[42vw];
       }
+
+      .images {
+        @apply  hidden sm:block
+      }
     }
   }
 
