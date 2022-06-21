@@ -57,30 +57,30 @@
         </div>
 
         <div class="center images hidden sm:block relative">
-          <img class="one w-[27vw]" src="svg/stacked-image.svg" alt="" />
+          <img class="one w-[27vw]" src="images/certificates/Associate-chief-of-staff.png" alt="" />
           <img
             class="two w-[27vw] -mt-[5vw] invert z-[10] opacity-0"
-            src="svg/stacked-image.svg"
+            src="images/certificates/building-digital-products.png"
             alt=""
           />
           <img
             class="three w-[27vw] -mt-[4vw] z-[20] opacity-0"
-            src="svg/stacked-image.svg"
+            src="images/certificates/basic-digital-skills.png"
             alt=""
           />
           <img
             class="four w-[27vw] -mt-[3vw] z-[30] opacity-0"
-            src="svg/stacked-image.svg"
+            src="images/certificates/enterprise-design-thinking.png"
             alt=""
           />
           <img
             class="five w-[27vw] -mt-[2vw] z-[40] opacity-0"
-            src="svg/stacked-image.svg"
+            src="images/certificates/building-digital-products.png"
             alt=""
           />
           <img
             class="six w-[27vw] -mt-[2vw] z-[50] opacity-0 last"
-            src="svg/stacked-image.svg"
+            src="images/certificates/basic-digital-skills.png"
             alt=""
           />
         </div>
