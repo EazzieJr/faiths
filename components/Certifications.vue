@@ -106,7 +106,9 @@
 import gsap from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Certificate from "./Certificate.vue";
+import aosMixin from "~/mixins/aos";
 export default {
+  mixins: [aosMixin],
   data() {
     return {
       images: ["spak", "second", "third", "fourth", "dummy"],

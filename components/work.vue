@@ -110,14 +110,22 @@ import gsap from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { TextPlugin } from "gsap/TextPlugin";
 import Project from "./Project.vue";
+import aosMixin from "~/mixins/aos";
 gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
 export default {
+  mixins: [aosMixin],
   data() {
     return {
       position: 0,
       images: ["spak", "second", "third", "fourth", "dummy"],
-      href: ["spak.africa", "entrepreneurshipvillage.com/", "etrustfund.org/", "africablockchain.institute/incubator-program/", "cmapit.io/"]
+      href: [
+        "spak.africa",
+        "entrepreneurshipvillage.com/",
+        "etrustfund.org/",
+        "africablockchain.institute/incubator-program/",
+        "cmapit.io/",
+      ],
     };
   },
   mounted() {

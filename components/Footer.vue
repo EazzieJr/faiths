@@ -6,7 +6,11 @@
           <h2 class="translate-y-[10vw]" data-cursor="-opaque">SOCIALS</h2>
         </div>
 
-        <div data-aos="fade-in" class="space-y-7 md:space-y-[3.35vw]">
+        <div
+          data-aos="fade-in"
+          data-aos-duratoin="1500"
+          class="space-y-7 md:space-y-[3.35vw]"
+        >
           <a
             v-for="social in socials"
             :key="social.index"
@@ -36,11 +40,16 @@
 </template>
 
 <script>
+import $ from "jquery";
+import Magnetic from "~/js/magnetic.js";
+import aosMixin from "~/mixins/aos";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { TextPlugin } from "gsap/TextPlugin";
 gsap.registerPlugin(ScrollTrigger, TextPlugin);
 export default {
+  mixins: [aosMixin],
+
   data() {
     return {
       socials: [
@@ -54,6 +63,11 @@ export default {
   },
 
   mounted() {
+    new Magnetic();
+    $("[data-magnetic]").each(function () {
+      new Magnetic(this);
+    });
+
     gsap.to(".socials h2", {
       scrollTrigger: {
         trigger: ".socials h2",

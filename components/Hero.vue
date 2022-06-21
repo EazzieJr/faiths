@@ -142,6 +142,8 @@
 </template>
 
 <script>
+import $ from "jquery";
+import Magnetic from "~/js/magnetic.js";
 import { gsap } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -276,8 +278,10 @@ export default {
   },
 
   async mounted() {
-    // ClipCursor = (await import("~/js/clipCursor")).default;
-    // new ClipCursor(document.querySelector(".clipp"));
+    new Magnetic();
+    $("[data-magnetic]").each(function () {
+      new Magnetic(this);
+    });
     this.heroAnimate();
   },
 };
