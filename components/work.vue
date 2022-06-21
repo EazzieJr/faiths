@@ -192,7 +192,7 @@ export default {
         trigger: ".success-text",
         start: "bottom bottom",
         end: "bottom bottom",
-        markers: true,
+        markers: false,
         toggleActions: "play none none reset",
       },
       text: {

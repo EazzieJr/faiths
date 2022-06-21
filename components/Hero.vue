@@ -189,7 +189,7 @@ export default {
           end: "bottom top",
           scrub: 2,
           // pin: true,
-          markers: true,
+          markers: false,
         },
 
         x: "5vw",
