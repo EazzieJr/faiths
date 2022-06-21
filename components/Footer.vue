@@ -2,10 +2,12 @@
   <footer>
     <div class="footer-container">
       <div class="top-left">
-        <h2 data-cursor="-opaque">SOCIALS</h2>
+        <div class="socials overflow-hidden">
+          <h2 class="translate-y-[10vw]" data-cursor="-opaque">SOCIALS</h2>
+        </div>
 
         <a
-          v-for="(social) in socials"
+          v-for="social in socials"
           :key="social.index"
           href="/"
           class="max-w-fit start space-x-4 md:space-x-[1.675vw]"
@@ -21,22 +23,21 @@
       </div>
 
       <div class="connect">
-        <p data-cursor="-exclusion">
-          Connect with me
-          <br />
-          via mail at <br />
-          <a data-cursor="-sm" href="mailto: faith.olaniyi@gmail.com">Faith.olaniyi@gmail.com</a>
-        </p>
+        <p data-cursor="-exclusion"></p>
       </div>
     </div>
 
     <div class="copyright">
-      <a href="https://centuryleap.com" data-cursor="-sm -opaque">Designed AT CENTURY LEAP</a>
+      <a href="https://centuryleap.com" data-cursor="-sm -opaque"></a>
     </div>
   </footer>
 </template>
 
 <script>
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { TextPlugin } from "gsap/TextPlugin";
+gsap.registerPlugin(ScrollTrigger, TextPlugin);
 export default {
   data() {
     return {
@@ -48,6 +49,50 @@ export default {
         { name: "Medium", link: "" },
       ],
     };
+  },
+
+  mounted() {
+    gsap.to(".socials h2", {
+      scrollTrigger: {
+        trigger: ".socials h2",
+        start: "center bottom",
+        // scrub: true,
+        toggleActions: "play none none reverse",
+      },
+      duration: 1.5,
+      stagger: 0.1,
+      y: 0,
+      ease: "power3.inOut",
+    });
+    
+    gsap.to(".connect p", {
+      scrollTrigger: {
+        trigger: ".connect",
+        start: "center 80%",
+      },
+
+      text: {
+        value: `Connect with me
+          <br />
+          via mail at <br />
+          <a data-cursor="-sm" href="mailto: faith.olaniyi@gmail.com"
+            >Faith.olaniyi@gmail.com</a
+          >`,
+      },
+      duration: 2,
+    });
+
+    gsap.to(".copyright a", {
+      scrollTrigger: {
+        trigger: ".copyright",
+        start: "center bottom",
+      },
+
+      text: {
+        value: "Designed AT CENTURY LEAP",
+      },
+      duration: 2,
+    });
   },
 };
 </script>
@@ -64,7 +109,6 @@ footer {
 }
 .social-name {
   @apply first-letter:capitalize text-xl md:text-[2.13vw] md:leading-[3.4vw];
-  
 }
 
 .connect {
@@ -78,7 +122,7 @@ footer {
 .copyright {
   @apply px-6 border-t start py-8 md:px-[3.35vw] md:pt-[3.8vw] md:pb-[3.2vw] border-color;
 
-  p {
+  a {
     @apply font-sans text-[10px] lg:text-[0.93vw] md:leading-[1.6vw] uppercase;
   }
 }
