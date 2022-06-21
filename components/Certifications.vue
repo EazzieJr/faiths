@@ -57,29 +57,29 @@
         </div>
 
         <div class="center images hidden sm:block relative">
-          <img class="one w-[27vw]" src="images/certificates/Associate-chief-of-staff.png" alt="" />
+          <img class="one w-[25vw]" src="images/certificates/Associate-chief-of-staff.png" alt="" />
           <img
-            class="two w-[27vw] -mt-[5vw] invert z-[10] opacity-0"
+            class="two w-[27vw] -mt-[7vw] z-[10] opacity-0"
             src="images/certificates/building-digital-products.png"
             alt=""
           />
           <img
-            class="three w-[27vw] -mt-[4vw] z-[20] opacity-0"
+            class="three w-[25vw] -mt-[6vw] z-[20] opacity-0"
             src="images/certificates/basic-digital-skills.png"
             alt=""
           />
           <img
-            class="four w-[27vw] -mt-[3vw] z-[30] opacity-0"
+            class="four w-[25vw] -mt-[5vw] z-[30] opacity-0"
             src="images/certificates/enterprise-design-thinking.png"
             alt=""
           />
           <img
-            class="five w-[27vw] -mt-[2vw] z-[40] opacity-0"
+            class="five w-[25vw] -mt-[4vw] z-[40] opacity-0"
             src="images/certificates/building-digital-products.png"
             alt=""
           />
           <img
-            class="six w-[27vw] -mt-[2vw] z-[50] opacity-0 last"
+            class="six w-[25vw] -mt-[5vw] z-[50] opacity-0 last"
             src="images/certificates/basic-digital-skills.png"
             alt=""
           />
