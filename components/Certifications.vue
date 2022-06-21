@@ -19,6 +19,7 @@
             organisation="The Chief of Staff Association"
             year="2022"
           />
+
           <Certificate
             class="pam"
             src="unfocused"
@@ -26,6 +27,7 @@
             organisation="Product School"
             year="2022"
           />
+
           <Certificate
             class="hap"
             src="unfocused"
@@ -33,6 +35,7 @@
             organisation="Product School"
             year="2022"
           />
+
           <Certificate
             class="edt"
             src="unfocused"
@@ -40,6 +43,7 @@
             organisation="IBM"
             year="2022"
           />
+
           <Certificate
             class="hbd"
             src="unfocused"
@@ -47,6 +51,7 @@
             organisation="Product School"
             year="2021"
           />
+
           <Certificate
             class="bds"
             src="unfocused"
@@ -57,7 +62,11 @@
         </div>
 
         <div class="center images hidden sm:block relative">
-          <img class="one w-[25vw]" src="images/certificates/Associate-chief-of-staff.png" alt="" />
+          <img
+            class="one w-[25vw]"
+            src="images/certificates/Associate-chief-of-staff.png"
+            alt=""
+          />
           <img
             class="two w-[27vw] -mt-[7vw] z-[10] opacity-0"
             src="images/certificates/building-digital-products.png"
@@ -104,6 +113,12 @@ export default {
     };
   },
 
+  methods: {
+    change(selector, condition) {
+      document.querySelector(selector).src = condition;
+    },
+  },
+
   mounted() {
     gsap.to(".one", {
       scrollTrigger: {
@@ -127,6 +142,12 @@ export default {
         scrub: true,
         markers: false,
         id: "rotate",
+        onEnter: () => {
+          this.change(".pam img", "svg/focused.svg");
+        },
+        onEnterBack: () => {
+          this.change(".pam img", "svg/unfocused.svg");
+        },
       },
 
       opacity: 1,
@@ -155,6 +176,12 @@ export default {
         scrub: true,
         markers: false,
         id: "rotate",
+        onEnter: () => {
+          this.change(".hap img", "svg/focused.svg");
+        },
+        onEnterBack: () => {
+          this.change(".hap img", "svg/unfocused.svg");
+        },
       },
 
       opacity: 1,
@@ -183,6 +210,12 @@ export default {
         scrub: true,
         markers: false,
         id: "rotate",
+        onEnter: () => {
+          this.change(".edt img", "svg/focused.svg");
+        },
+        onEnterBack: () => {
+          this.change(".edt img", "svg/unfocused.svg");
+        },
       },
 
       opacity: 1,
@@ -211,6 +244,12 @@ export default {
         scrub: true,
         markers: false,
         id: "rotate",
+        onEnter: () => {
+          this.change(".hbd img", "svg/focused.svg");
+        },
+        onEnterBack: () => {
+          this.change(".hbd img", "svg/unfocused.svg");
+        },
       },
 
       opacity: 1,
@@ -239,6 +278,12 @@ export default {
         scrub: true,
         markers: false,
         id: "rotate",
+        onEnter: () => {
+          this.change(".bds img", "svg/focused.svg");
+        },
+        onEnterBack: () => {
+          this.change(".bds img", "svg/unfocused.svg");
+        },
       },
 
       opacity: 1,
@@ -257,9 +302,6 @@ export default {
         pinSpacing: false,
       },
     });
-
-    ScrollTrigger.refresh();
-    console.log("I am mounted");
   },
   components: { Certificate },
 };
@@ -286,7 +328,7 @@ export default {
       }
 
       .images {
-        @apply  hidden sm:block
+        @apply hidden sm:block;
       }
     }
   }
