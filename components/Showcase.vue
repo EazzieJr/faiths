@@ -144,7 +144,7 @@ export default {
     gsap.to(".product, .showcase", {
       scrollTrigger: {
         trigger: ".product",
-        start: "center bottom",
+        start: "top bottom",
         // scrub: true,
         toggleActions: "play none none reverse",
       },
