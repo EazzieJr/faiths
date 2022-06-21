@@ -1,5 +1,6 @@
 <template>
-  <div
+  <a :href="`https://${href}`" target="blank"
+  data-cursor="-exclusion -sm"
     class="experience w-full between -ml-12 md:-ml-[6.7vw] mb-[70%] md:mb-0 last:mb-[25%] sm:last:mb-[12.5%] md:last:pb-[10vw]"
   >
     <div class="">
@@ -39,12 +40,12 @@
         {{ year }}
       </p>
     </div>
-  </div>
+  </a>
 </template>
 
 <script>
 export default {
-  props: ['id', 'company', 'role', 'year']
+  props: ['id', 'company', 'role', 'year', 'href']
 };
 </script>
 

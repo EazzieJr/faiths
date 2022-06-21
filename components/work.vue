@@ -27,12 +27,14 @@
           <div
             class="px-6 md:ml-[3.35vw] md:pl-0 lg:pr-0 sticky top-[25%] xl:top-[12.5%] sm:max-w-[39.94vw] md:max-w-none md:w-[40vw] md:z-20"
           >
-            <div class="test">
-              <img
-                :src="`images/work/${images[position]}.png`"
-                alt=""
-                class="w-full relative max-w-[350px] sm:max-w-[100%] md:max-w-none md:w-[40vw] mx-auto md:mx-0"
-              />
+            <div class="test" data-cursor-text="view case">
+              <a :href="`https://${href[position]}`" target="blank">
+                <img
+                  :src="`images/work/${images[position]}.png`"
+                  alt=""
+                  class="w-full relative max-w-[350px] sm:max-w-[100%] md:max-w-none md:w-[40vw] mx-auto md:mx-0"
+                />
+              </a>
             </div>
           </div>
 
@@ -45,20 +47,23 @@
               company="Spak.Africa"
               role="president and founder"
               year="2022"
+              :href="[href[0]]"
             />
             <Project
               class="oea"
               id="0.2"
-              company="SPECIAL ADVISER TO ONDO STATE GOVT & CEO OF ONDO STATE ENTREPRENEURSHIP AGENCY"
+              company="Entrepreneurship Village"
               role="special assistant"
               year="2021"
+              :href="[href[1]]"
             />
             <Project
               class="aye"
               id="0.3"
-              company="AFRICA’S YOUNG ENTREPRENEURS"
+              company="Etrust Fund"
               role="chief of staff"
               year="2021"
+              :href="[href[2]]"
             />
             <Project
               class="abi"
@@ -66,13 +71,15 @@
               company="AFRICA BLOCKCHAIN INSTITUTE"
               role="Executive Assistant"
               year="2021"
+              :href="[href[3]]"
             />
             <Project
               class="ci"
               id="0.5"
-              company="CYCLEBREEZE INNOVATIONS"
+              company="cMaptIT"
               role="Business, Product and Growth Lead"
               year="2018"
+              :href="[href[4]]"
             />
           </div>
         </div>
@@ -110,6 +117,7 @@ export default {
     return {
       position: 0,
       images: ["spak", "second", "third", "fourth", "dummy"],
+      href: ["spak.africa", "entrepreneurshipvillage.com/", "etrustfund.org/", "africablockchain.institute/incubator-program/", "cmapit.io/"]
     };
   },
   mounted() {
