@@ -14,7 +14,8 @@
           <a
             v-for="social in socials"
             :key="social.index"
-            href="/"
+            :href="social.link"
+            target="blank"
             class="max-w-fit start space-x-4 md:space-x-[1.675vw]"
             data-cursor="-sm -exclusion"
             data-magnetic
@@ -53,11 +54,9 @@ export default {
   data() {
     return {
       socials: [
-        { name: "Facebook", link: "" },
-        { name: "Twitter", link: "" },
-        { name: "Instagram", link: "" },
-        { name: "Youtube", link: "" },
-        { name: "Medium", link: "" },
+        { name: "LinkedIn", link: "https://www.linkedin.com/in/faith-olaniyi/" },
+        { name: "Twitter", link: "https://twitter.com/faith_olaniyi" },
+        { name: "Instagram", link: "https://www.instagram.com/faith_olaniyi/" },
       ],
     };
   },
