@@ -6,20 +6,22 @@
           <h2 class="translate-y-[10vw]" data-cursor="-opaque">SOCIALS</h2>
         </div>
 
-        <a
-          v-for="social in socials"
-          :key="social.index"
-          href="/"
-          class="max-w-fit start space-x-4 md:space-x-[1.675vw]"
-          data-cursor="-sm -exclusion"
-          data-magnetic
-        >
-          <span class="social-name">{{ social.name }}</span>
+        <div data-aos="fade-in" class="space-y-7 md:space-y-[3.35vw]">
+          <a
+            v-for="social in socials"
+            :key="social.index"
+            href="/"
+            class="max-w-fit start space-x-4 md:space-x-[1.675vw]"
+            data-cursor="-sm -exclusion"
+            data-magnetic
+          >
+            <span class="social-name">{{ social.name }}</span>
 
-          <span class="w-8 md:min-w-[3.6vw]">
-            <img class="dark:invert" src="svg/arrow.svg" alt="" />
-          </span>
-        </a>
+            <span class="w-8 md:min-w-[3.6vw]">
+              <img class="dark:invert" src="svg/arrow.svg" alt="" />
+            </span>
+          </a>
+        </div>
       </div>
 
       <div class="connect">
@@ -64,7 +66,7 @@ export default {
       y: 0,
       ease: "power3.inOut",
     });
-    
+
     gsap.to(".connect p", {
       scrollTrigger: {
         trigger: ".connect",
@@ -75,8 +77,8 @@ export default {
         value: `Connect with me
           <br />
           via mail at <br />
-          <a data-cursor="-sm" href="mailto: faith.olaniyi@gmail.com"
-            >Faith.olaniyi@gmail.com</a
+          <a data-cursor="-sm" href="mailto: hello@faitholaniyi.com"
+            >hello@faitholaniyi.com</a
           >`,
       },
       duration: 2,
