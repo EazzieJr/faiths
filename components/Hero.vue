@@ -46,7 +46,7 @@
             <div class="text hero-text">
               <!-- Hero headder for 650px downwards -->
               <h1 class="relative md:hidden small-h1">
-                founder & CEO, CHIEF OF STAFF, CREAtIVE SPECIALIST, BUSINESS
+                founder & CEO, CHIEF OF STAFF, <span>CREAtIVE SPECIALIST,</span> BUSINESS
                 STRATEGIST
               </h1>
 
@@ -181,7 +181,7 @@ export default {
         overflow: "visible",
       })
 
-      gsap.to(".big-hero .first, .big-hero .second, .big-hero .third, .big-hero .fourth", {
+      gsap.to(".big-hero .first, .big-hero .second, .big-hero .third, .big-hero .fourth, .small-h1 span", {
         scrollTrigger: {
           trigger: ".big-hero .first",
           start: "top 25%",

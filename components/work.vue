@@ -21,16 +21,19 @@
           <div
             class="absolute left-[51.12vw] top-[14vw] w-6 lg:w-[1.58vw] rotate-45"
           >
-            <img src="svg/staricon.svg" alt="" />
+            <img class="dark:invert" src="svg/staricon.svg" alt="" />
           </div>
+
           <div
             class="px-6 md:ml-[3.35vw] md:pl-0 lg:pr-0 sticky top-[25%] xl:top-[12.5%] sm:max-w-[39.94vw] md:max-w-none md:w-[40vw] md:z-20"
           >
-            <img
-              :src="`images/work/${images[position]}.png`"
-              alt=""
-              class="w-full max-w-[350px] sm:max-w-[100%] md:max-w-none md:w-[40vw] mx-auto md:mx-0"
-            />
+            <div class="test">
+              <img
+                :src="`images/work/${images[position]}.png`"
+                alt=""
+                class="w-full relative max-w-[350px] sm:max-w-[100%] md:max-w-none md:w-[40vw] mx-auto md:mx-0"
+              />
+            </div>
           </div>
 
           <div
@@ -205,4 +208,20 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="postcss" scoped>
+.test {
+  @apply relative;
+}
+
+.test::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @apply bg-white bg-opacity-20 dark:bg-opacity-20 dark:bg-black md:hidden;
+  z-index: 100000;
+}
+</style>

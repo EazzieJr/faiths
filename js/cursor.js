@@ -18,8 +18,8 @@ export default class Cursor {
       visibleTimeout: 300
     }, options);
     this.body = $(this.options.container);
-    this.el = $('<div class="cb-cursor dark:bg-white dark:text-[#111111]"></div>');
-    this.text = $('<div class="cb-cursor-text font-kugile"></div>');
+    this.el = $('<div class="cb-cursor dark:bg-white dark:text-[#111111] hidden lg:block"></div>');
+    this.text = $('<div class="cb-cursor-text font-kugile hidden lg:block"></div>');
     this.init();
   }
 
