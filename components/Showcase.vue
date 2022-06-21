@@ -3,11 +3,11 @@
     <div class="pt-16 md:pt-[8.3vw]">
       <div class="pb-4 md:pb-[1.675vw]">
         <div class="overflow-hidden">
-          <h2 data-aos="fade-up" data-aos-duration="1000">Product</h2>
+          <h2 class="product translate-y-[10vw]">Product</h2>
         </div>
 
         <div class="overflow-hidden">
-          <h2 data-aos="fade-up" data-aos-duration="1000">showcase</h2>
+          <h2 class="showcase translate-y-[10vw]">showcase</h2>
         </div>
       </div>
 
@@ -141,6 +141,19 @@ gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
 export default {
   mounted() {
+    gsap.to(".product, .showcase", {
+      scrollTrigger: {
+        trigger: ".product",
+        start: "center bottom",
+        // scrub: true,
+        toggleActions: "play none none reverse",
+      },
+      duration: 1.5,
+      stagger: 0.1,
+      y: 0,
+      ease: "power3.inOut",
+    });
+
     gsap.to(".products-text", {
       scrollTrigger: {
         trigger: ".products-text",
