@@ -10,7 +10,7 @@
         </h2>
       </div>
 
-      <div class="bottom start-start">
+      <div class="bottom start-start relative">
         <div class="texts">
           <Certificate
             class="acf-fc-layout-certificate"
@@ -56,16 +56,13 @@
           />
         </div>
 
-        <div class="center images hidden sm:block sticky top-[10vw]">
-          <div class="relative w-[27vw]">
-            <img
-            v-for="(image) in images"
-            :key="image.id"
-              class="absolute w-full rotate-0"
-              :src="`svg/stacked-images.svg`"
-              alt=""
-            />
-          </div>
+        <div class="center images hidden sm:block relative">
+          <img class="one w-[27vw]" src="svg/stacked-images.svg" alt="" />
+          <img class="two w-[27vw] -mt-[5vw] invert z-[10]" src="svg/stacked-images.svg" alt="" />
+          <img class="three w-[27vw] -mt-[4vw] z-[20]" src="svg/stacked-images.svg" alt="" />
+          <img class="four w-[27vw] -mt-[3vw] z-[30]" src="svg/stacked-images.svg" alt="" />
+          <img class="five w-[27vw] -mt-[2vw] z-[40]" src="svg/stacked-images.svg" alt="" />
+          <img class="six w-[27vw] -mt-[2vw] z-[50] last" src="svg/stacked-images.svg" alt="" />
         </div>
       </div>
     </div>
@@ -88,6 +85,86 @@ export default {
   },
 
   mounted() {
+    gsap.to(".one", {
+      scrollTrigger: {
+        trigger: ".one",
+        start: "center 30%",
+        endTrigger: ".last",
+        end: "center 230",
+        pin: true,
+        scrub: true,
+        markers: true,
+        pinSpacing: false
+      },
+    })
+
+    gsap.to(".two", {
+      scrollTrigger: {
+        trigger: ".two",
+        start: "center 30%",
+        endTrigger: ".last",
+        end: "center 230",
+        pin: true,
+        scrub: true,
+        markers: true,
+        pinSpacing: false
+      },
+    })
+
+    gsap.to(".three", {
+      scrollTrigger: {
+        trigger: ".three",
+        start: "center 30%",
+        endTrigger: ".last",
+        end: "center 230",
+        pin: true,
+        scrub: true,
+        markers: true,
+        pinSpacing: false
+      },
+    })
+
+    gsap.to(".four", {
+      scrollTrigger: {
+        trigger: ".four",
+        start: "center 30%",
+        endTrigger: ".last",
+        end: "center 230",
+        pin: true,
+        scrub: true,
+        markers: true,
+        pinSpacing: false
+      },
+    })
+
+    gsap.to(".five", {
+      scrollTrigger: {
+        trigger: ".five",
+        start: "center 30%",
+        endTrigger: ".last",
+        end: "center 230",
+        pin: true,
+        scrub: true,
+        markers: true,
+        pinSpacing: false
+      },
+    })
+
+    gsap.to(".six", {
+      scrollTrigger: {
+        trigger: ".six",
+        start: "center 30%",
+        endTrigger: ".last",
+        end: "center 230",
+        pin: true,
+        scrub: true,
+        markers: true,
+        pinSpacing: false
+      },
+    })
+
+    
+    
     ScrollTrigger.refresh();
     console.log("I am mounted");
   },
