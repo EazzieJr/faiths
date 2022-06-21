@@ -3,12 +3,7 @@
     <div class="pt-[9.4vw] border-color border-l">
       <div class="pl-6 md:pl-[3.35vw] work-anime">
         <div class="overflow-hidden">
-          <h2
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-offset="400"
-            class="work-text"
-          >
+          <h2 class="work-text translate-y-[10vw]">
             WORKs
             <span class="inline-block w-[2rem] lg:w-[4vw] ml-[1vw]">
               <img src="svg/staricon.svg" alt="" />
@@ -17,14 +12,7 @@
         </div>
 
         <div class="overflow-hidden">
-          <h2
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-offset="400"
-            class="experience-text"
-          >
-            EXPERIENCE
-          </h2>
+          <h2 class="experience-text translate-y-[10vw]">EXPERIENCE</h2>
         </div>
       </div>
 
@@ -122,6 +110,19 @@ export default {
     };
   },
   mounted() {
+    gsap.to(".work-text, .experience-text", {
+      scrollTrigger: {
+        trigger: ".work-text",
+        start: "center bottom",
+        // scrub: true,
+        toggleActions: "play none none reverse",
+      },
+      duration: 1.5,
+      stagger: 0.1,
+      y: 0,
+      ease: "power3.inOut",
+    });
+
     gsap.to(".oea", {
       scrollTrigger: {
         trigger: ".oea",
@@ -130,15 +131,15 @@ export default {
         scrub: 1,
         // markers: true,
         onEnter: () => {
-          this.position = 1
+          this.position = 1;
         },
         onEnterBack: () => {
-          this.position = 0
+          this.position = 0;
         },
       },
     });
 
-     gsap.to(".aye", {
+    gsap.to(".aye", {
       scrollTrigger: {
         trigger: ".aye",
         start: "center 90%",
@@ -146,15 +147,15 @@ export default {
         scrub: 1,
         // markers: true,
         onEnter: () => {
-          this.position = 2
+          this.position = 2;
         },
         onEnterBack: () => {
-          this.position = 1
+          this.position = 1;
         },
       },
-     });
+    });
 
-     gsap.to(".abi", {
+    gsap.to(".abi", {
       scrollTrigger: {
         trigger: ".abi",
         start: "center 90%",
@@ -162,13 +163,13 @@ export default {
         scrub: 1,
         // markers: true,
         onEnter: () => {
-          this.position = 3
+          this.position = 3;
         },
         onEnterBack: () => {
-          this.position = 2
+          this.position = 2;
         },
       },
-     });
+    });
 
     gsap.to(".ci", {
       scrollTrigger: {
@@ -178,10 +179,10 @@ export default {
         scrub: 1,
         // markers: true,
         onEnter: () => {
-          this.position = 4
+          this.position = 4;
         },
         onEnterBack: () => {
-          this.position = 3
+          this.position = 3;
         },
       },
     });
