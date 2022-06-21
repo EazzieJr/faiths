@@ -16,7 +16,6 @@
       <h3
         data-aos="fade-up"
         data-aos-duration="1000"
-        data-aos-anchor-placement="bottom-center"
         class="font-kugile text-xl sm:text-2xl md:text-[2.65vw] leading-10 md:leading-normal"
       >
         {{ company }}
@@ -26,7 +25,6 @@
         data-aos="fade-left"
         data-aos-duration="1000"
         data-aos-delay="200"
-        data-aos-anchor-placement="bottom-center"
         class="explainer font-light"
       >
         {{ role }}
@@ -36,7 +34,6 @@
         data-aos="fade-left"
         data-aos-duration="1000"
         data-aos-delay="300"
-        data-aos-anchor-placement="bottom-center"
         class="explainer font-light"
       >
         {{ year }}
