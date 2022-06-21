@@ -165,17 +165,17 @@ export default {
             duration: 1.5,
             opacity: 1,
           }).to(".write-in", {
-              text: {
-                value: "Consistency in growth, perfection in sustainability.",
-              },
-              duration: 2,
-              opacity: 1,
-              onComplete: () => {
-                ScrollTrigger.refresh();
-              },
-            })
+            text: {
+              value: "Consistency in growth, perfection in sustainability.",
+            },
+            duration: 2,
+            opacity: 1,
+            onComplete: () => {
+              ScrollTrigger.refresh();
+            },
+          });
         },
-        
+
         "(min-width: 768px)": function () {
           const tl = gsap.timeline({ ease: "power3.out" });
           tl.to(
@@ -186,6 +186,9 @@ export default {
               delay: 1,
               stagger: 0.1,
               ease: "ease out",
+              onComplete: () => {
+                ScrollTrigger.refresh();
+              },
             }
           )
             .to(".write-in", {
