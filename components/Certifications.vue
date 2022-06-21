@@ -57,12 +57,32 @@
         </div>
 
         <div class="center images hidden sm:block relative">
-          <img class="one w-[27vw]" src="svg/stacked-images.svg" alt="" />
-          <img class="two w-[27vw] -mt-[5vw] invert z-[10]" src="svg/stacked-images.svg" alt="" />
-          <img class="three w-[27vw] -mt-[4vw] z-[20]" src="svg/stacked-images.svg" alt="" />
-          <img class="four w-[27vw] -mt-[3vw] z-[30]" src="svg/stacked-images.svg" alt="" />
-          <img class="five w-[27vw] -mt-[2vw] z-[40]" src="svg/stacked-images.svg" alt="" />
-          <img class="six w-[27vw] -mt-[2vw] z-[50] last" src="svg/stacked-images.svg" alt="" />
+          <img class="one w-[27vw]" src="svg/stacked-image.svg" alt="" />
+          <img
+            class="two w-[27vw] -mt-[5vw] invert z-[10] opacity-0"
+            src="svg/stacked-image.svg"
+            alt=""
+          />
+          <img
+            class="three w-[27vw] -mt-[4vw] z-[20] opacity-0"
+            src="svg/stacked-image.svg"
+            alt=""
+          />
+          <img
+            class="four w-[27vw] -mt-[3vw] z-[30] opacity-0"
+            src="svg/stacked-image.svg"
+            alt=""
+          />
+          <img
+            class="five w-[27vw] -mt-[2vw] z-[40] opacity-0"
+            src="svg/stacked-image.svg"
+            alt=""
+          />
+          <img
+            class="six w-[27vw] -mt-[2vw] z-[50] opacity-0 last"
+            src="svg/stacked-image.svg"
+            alt=""
+          />
         </div>
       </div>
     </div>
@@ -93,10 +113,25 @@ export default {
         end: "center 230",
         pin: true,
         scrub: true,
-        markers: true,
-        pinSpacing: false
+        // markers: false,
+        pinSpacing: false,
       },
-    })
+    });
+
+    gsap.to(".two", {
+      scrollTrigger: {
+        trigger: ".two",
+        start: "center 35%",
+        // endTrigger: ".two",
+        end: "center 30%",
+        scrub: true,
+        markers: false,
+        id: "rotate",
+      },
+
+      opacity: 1,
+      rotate: (Math.random() - 0.5) * 40,
+    });
 
     gsap.to(".two", {
       scrollTrigger: {
@@ -106,10 +141,25 @@ export default {
         end: "center 230",
         pin: true,
         scrub: true,
-        markers: true,
-        pinSpacing: false
+        // markers: false,
+        pinSpacing: false,
       },
-    })
+    });
+
+    gsap.to(".three", {
+      scrollTrigger: {
+        trigger: ".three",
+        start: "center 35%",
+        // endTrigger: ".two",
+        end: "center 30%",
+        scrub: true,
+        markers: false,
+        id: "rotate",
+      },
+
+      opacity: 1,
+      rotate: (Math.random() - 0.5) * 40,
+    });
 
     gsap.to(".three", {
       scrollTrigger: {
@@ -119,10 +169,25 @@ export default {
         end: "center 230",
         pin: true,
         scrub: true,
-        markers: true,
-        pinSpacing: false
+        // markers: false,
+        pinSpacing: false,
       },
-    })
+    });
+
+    gsap.to(".four", {
+      scrollTrigger: {
+        trigger: ".four",
+        start: "center 35%",
+        // endTrigger: ".two",
+        end: "center 30%",
+        scrub: true,
+        markers: false,
+        id: "rotate",
+      },
+
+      opacity: 1,
+      rotate: (Math.random() - 0.5) * 40,
+    });
 
     gsap.to(".four", {
       scrollTrigger: {
@@ -132,10 +197,25 @@ export default {
         end: "center 230",
         pin: true,
         scrub: true,
-        markers: true,
-        pinSpacing: false
+        // markers: false,
+        pinSpacing: false,
       },
-    })
+    });
+
+    gsap.to(".five", {
+      scrollTrigger: {
+        trigger: ".five",
+        start: "center 35%",
+        // endTrigger: ".two",
+        end: "center 30%",
+        scrub: true,
+        markers: false,
+        id: "rotate",
+      },
+
+      opacity: 1,
+      rotate: (Math.random() - 0.5) * 40,
+    });
 
     gsap.to(".five", {
       scrollTrigger: {
@@ -145,10 +225,25 @@ export default {
         end: "center 230",
         pin: true,
         scrub: true,
-        markers: true,
-        pinSpacing: false
+        // markers: false,
+        pinSpacing: false,
       },
-    })
+    });
+
+    gsap.to(".six", {
+      scrollTrigger: {
+        trigger: ".six",
+        start: "center 35%",
+        // endTrigger: ".two",
+        end: "center 30%",
+        scrub: true,
+        markers: false,
+        id: "rotate",
+      },
+
+      opacity: 1,
+      rotate: (Math.random() - 0.5) * 40,
+    });
 
     gsap.to(".six", {
       scrollTrigger: {
@@ -158,13 +253,11 @@ export default {
         end: "center 230",
         pin: true,
         scrub: true,
-        markers: true,
-        pinSpacing: false
+        // markers: false,
+        pinSpacing: false,
       },
-    })
+    });
 
-    
-    
     ScrollTrigger.refresh();
     console.log("I am mounted");
   },
