@@ -272,6 +272,9 @@ export default {
             },
             delay: -5,
             duration: 5,
+            onComplete: () => {
+              ScrollTrigger.refresh();
+            },
           });
         },
       });

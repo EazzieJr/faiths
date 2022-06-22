@@ -166,6 +166,9 @@ export default {
         value: "here are some of the products i’ve lead, shipped and ideated",
       },
       duration: 2,
+      onComplete: () => {
+        ScrollTrigger.refresh();
+      },
     });
   },
 };

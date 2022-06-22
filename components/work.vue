@@ -220,6 +220,9 @@ export default {
         value: "I am very acquainted with success",
       },
       duration: 2,
+      onComplete: () => {
+        ScrollTrigger.refresh();
+      },
     });
   },
   components: { Project },
