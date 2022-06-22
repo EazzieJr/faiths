@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import { gsap } from "gsap/dist/dist";
+import { gsap } from "gsap/dist/gsap";
 import { TextPlugin } from "gsap/dist/TextPlugin";
 import { mapState } from "vuex";
 gsap.registerPlugin(TextPlugin);
