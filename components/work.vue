@@ -25,7 +25,7 @@
           </div>
 
           <div
-            class="px-6 md:ml-[3.35vw] md:pl-0 lg:pr-0 sticky top-[25%] xl:top-[12.5%] sm:max-w-[39.94vw] md:max-w-none md:w-[40vw] md:z-20"
+            class="px-6 md:ml-[3.35vw] md:pl-0 lg:pr-0 sticky top-[25%] xl:top-[12.5%] sm:w-[39.94vw] md:max-w-none md:w-[40vw] md:min-h-[46.9vw] md:z-20"
           >
             <div class="test" data-cursor-text="view case">
               <a :href="`https://${href[position]}`" target="blank">
