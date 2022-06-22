@@ -12,9 +12,10 @@
 </template>
 
 <script>
-import { gsap } from "gsap";
-import { TextPlugin } from "gsap/TextPlugin";
+import { gsap } from "gsap/dist/dist";
+import { TextPlugin } from "gsap/dist/TextPlugin";
 import { mapState } from "vuex";
+gsap.registerPlugin(TextPlugin);
 export default {
   computed: {
     ...mapState(["darkMode"]),
