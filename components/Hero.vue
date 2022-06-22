@@ -164,7 +164,7 @@ export default {
       ScrollTrigger.matchMedia({
         "(max-width: 767px)": function () {
           const tl = gsap.timeline({ ease: "power3.out" });
-          tl.to(".small-h1", {
+          tl.to(".small-h1, .image-pin", {
             duration: 1.5,
             opacity: 1,
           }).to(".write-in", {
@@ -182,11 +182,12 @@ export default {
         "(min-width: 768px)": function () {
           const tl = gsap.timeline({ ease: "power3.out" });
           tl.to(
-            ".big-hero .first, .big-hero .second, .big-hero .third, .big-hero .fourth",
+            ".big-hero .first, .big-hero .second, .big-hero .third, .big-hero .fourth, .image-pin",
             {
               y: 0,
               duration: 1,
               delay: 1,
+              opacity: 1,
               stagger: 0.1,
               ease: "ease out",
               onComplete: () => {
