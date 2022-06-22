@@ -38,7 +38,7 @@ import aosMixin from "~/mixins/aos";
 import Certifications from "../components/Certifications.vue";
 import Loader from "../components/Loader.vue";
 import { mapState, mapMutations } from "vuex";
-// import ClipCursor from '../js/clipCursor';
+import AOS from 'aos'
 
 export default {
   name: "IndexPage",
@@ -56,6 +56,12 @@ export default {
     $("[data-magnetic]").each(function () {
       new Magnetic(this);
     });
+
+    // document.querySelectorAll('img').forEach(img => {
+    //   img.addEventListener('load', () => {
+    //     AOS.refresh();
+    //   });
+    // });
   },
 };
 </script>

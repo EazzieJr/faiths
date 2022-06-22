@@ -111,6 +111,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { TextPlugin } from "gsap/TextPlugin";
 import Project from "./Project.vue";
 import aosMixin from "~/mixins/aos";
+import AOS from 'aos'
 gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
 export default {
@@ -129,6 +130,7 @@ export default {
     };
   },
   mounted() {
+        AOS.refresh()
     gsap.to(".work-text, .experience-text", {
       scrollTrigger: {
         trigger: ".work-text",
