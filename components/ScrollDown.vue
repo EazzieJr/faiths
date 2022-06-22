@@ -8,8 +8,6 @@
       <img class="scroll-img dark:invert opacity-0" src="svg/arrow.svg" alt="" />
     </span>
 
-    <p class="opacity-0">0</p>
-
   </div>
 </template>
 

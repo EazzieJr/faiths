@@ -75,7 +75,7 @@
               <p class="explainer write-in font-light opacity-0"></p>
             </div>
 
-            <div data-magnetic data-cursor="-opaque" data-cursor-stick="#img" class="image-pin image end bg-white dark:bg-[#0B0B0B]">
+            <div data-magnetic data-cursor="-opaque" data-cursor-stick="#img" class="image-pin image end bg-white dark:bg-[#0B0B0B] opacity-0">
               <img
                 class="circlular-hero w-28 md:min-w-[12vw] mix-blend-exclusion"
                 src="images/circular-hero.png"
