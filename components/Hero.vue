@@ -1,7 +1,7 @@
 <template>
   <section class="hero border-color relative">
     <nav class="border-color">
-      <div class="nav-container">
+      <div class="nav-container between">
         <div class="logo">
           <img class="w-8 lg:w-[3.8vw]" src="images/logo.png" alt="" />
           <p>
@@ -95,6 +95,8 @@
             <p
               class="explainer md:pr-[20vw] lg:pr-0 first-text"
               data-cursor="-exclusion"
+              data-aos="fade-up"
+              data-aos-duration="1000"
             >
               Faith Olaniyi is a creative generalist specialized in
               <span class="font-extrabold">product and business management</span
@@ -106,6 +108,8 @@
 
             <div class="image center md:end lg:hidden">
               <img
+              data-aos="fade-up"
+              data-aos-duration="1000"
                 class="w-full max-w-[350px] md:max-w-[400px]"
                 src="images/faith.png"
                 alt=""
@@ -115,6 +119,8 @@
             <p
               class="explainer md:pr-[20vw] lg:pr-0 second-text"
               data-cursor="-exclusion"
+              data-aos="fade-up"
+              data-aos-duration="1000"
             >
               Faith is a seasoned Chief of Staff and a member of the Chief of
               Staff association in the US. His resourcefulness and expertise
@@ -297,7 +303,7 @@ export default {
     @apply border-r;
 
     > .nav-container {
-      @apply between py-5 md:py-[1.4vw];
+      @apply py-5 md:py-[1.4vw];
 
       > .logo {
         @apply inline-flex items-center;
