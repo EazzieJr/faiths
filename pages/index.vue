@@ -51,7 +51,7 @@ export default {
 
   mounted() {
     new Cursor();
-    console.log(Cursor);
+    // console.log(Cursor);
     new Magnetic();
     $("[data-magnetic]").each(function () {
       new Magnetic(this);

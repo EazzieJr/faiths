@@ -153,7 +153,7 @@ export default {
       y: 0,
       ease: "power3.inOut",
       onComplete: () => {
-        ScrollTrigger.refresh()
+        ScrollTrigger.update()
           console.log("completed");
       },
     });
@@ -171,7 +171,7 @@ export default {
       },
       duration: 2,
       onComplete: () => {
-        ScrollTrigger.refresh();
+        ScrollTrigger.update();
       },
     });
   },
