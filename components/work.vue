@@ -106,13 +106,13 @@
 </template>
 
 <script>
-import gsap from "gsap/dist/gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { TextPlugin } from "gsap/TextPlugin";
+import { gsap } from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { TextPlugin } from "gsap/dist/TextPlugin";
+gsap.registerPlugin(ScrollTrigger, TextPlugin);
 import Project from "./Project.vue";
 import aosMixin from "~/mixins/aos";
-import AOS from 'aos'
-gsap.registerPlugin(ScrollTrigger, TextPlugin);
+import AOS from "aos";
 
 export default {
   mixins: [aosMixin],
@@ -130,7 +130,7 @@ export default {
     };
   },
   mounted() {
-        AOS.refresh()
+    AOS.refresh();
     gsap.to(".work-text, .experience-text", {
       scrollTrigger: {
         trigger: ".work-text",

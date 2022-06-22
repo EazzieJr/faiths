@@ -104,7 +104,8 @@
 
 <script>
 import gsap from "gsap/dist/gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 import Certificate from "./Certificate.vue";
 import aosMixin from "~/mixins/aos";
 export default {

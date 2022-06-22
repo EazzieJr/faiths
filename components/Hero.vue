@@ -75,7 +75,12 @@
               <p class="explainer write-in font-light opacity-0"></p>
             </div>
 
-            <div data-magnetic data-cursor="-opaque" data-cursor-stick="#img" class="image-pin image end bg-white dark:bg-[#0B0B0B] opacity-0">
+            <div
+              data-magnetic
+              data-cursor="-opaque"
+              data-cursor-stick="#img"
+              class="image-pin image end bg-white dark:bg-[#0B0B0B] opacity-0"
+            >
               <img
                 class="circlular-hero w-28 md:min-w-[12vw] mix-blend-exclusion"
                 src="images/circular-hero.png"
@@ -108,8 +113,8 @@
 
             <div class="image center md:end lg:hidden">
               <img
-              data-aos="fade-up"
-              data-aos-duration="1000"
+                data-aos="fade-up"
+                data-aos-duration="1000"
                 class="w-full max-w-[350px] md:max-w-[400px]"
                 src="images/faith.png"
                 alt=""
@@ -151,11 +156,11 @@
 <script>
 import $ from "jquery";
 import Magnetic from "~/js/magnetic.js";
-import { gsap } from "gsap";
-import { TextPlugin } from "gsap/TextPlugin";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { mapState, mapMutations } from "vuex";
+import { gsap } from "gsap/dist/gsap";
+import { TextPlugin } from "gsap/dist/TextPlugin";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(TextPlugin, ScrollTrigger);
+import { mapState, mapMutations } from "vuex";
 // let ClipCursor;
 
 export default {

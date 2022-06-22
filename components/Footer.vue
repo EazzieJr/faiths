@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <div class="footer-container col-end  border-color  md:evenly">
+    <div class="footer-container col-end border-color md:evenly">
       <div class="top-left border-color">
         <div class="socials overflow-hidden">
           <h2 class="translate-y-[10vw]" data-cursor="-opaque">SOCIALS</h2>
@@ -44,9 +44,9 @@
 import $ from "jquery";
 import Magnetic from "~/js/magnetic.js";
 import aosMixin from "~/mixins/aos";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { TextPlugin } from "gsap/TextPlugin";
+import { gsap } from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { TextPlugin } from "gsap/dist/TextPlugin";
 gsap.registerPlugin(ScrollTrigger, TextPlugin);
 export default {
   mixins: [aosMixin],
@@ -54,7 +54,10 @@ export default {
   data() {
     return {
       socials: [
-        { name: "LinkedIn", link: "https://www.linkedin.com/in/faith-olaniyi/" },
+        {
+          name: "LinkedIn",
+          link: "https://www.linkedin.com/in/faith-olaniyi/",
+        },
         { name: "Twitter", link: "https://twitter.com/faith_olaniyi" },
         { name: "Instagram", link: "https://www.instagram.com/faith_olaniyi/" },
       ],

@@ -135,8 +135,8 @@
 
 <script>
 import gsap from "gsap/dist/gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { TextPlugin } from "gsap/TextPlugin";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { TextPlugin } from "gsap/dist/TextPlugin";
 gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
 export default {
