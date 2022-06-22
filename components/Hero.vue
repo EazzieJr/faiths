@@ -10,7 +10,7 @@
           </p>
         </div>
 
-        <div class="right-container">
+        <div class="right-container start">
           <p data-magnetic class="resume">
             <span class="text-[10px] lg:text-[1.06vw]">resume</span>
 
@@ -314,7 +314,7 @@ export default {
       }
 
       > .right-container {
-        @apply start space-x-7 lg:space-x-[2.12vw] pr-2.5 md:pr-[0.66vw];
+        @apply space-x-7 lg:space-x-[2.12vw] pr-2.5 md:pr-[0.66vw];
 
         > .resume {
           @apply uppercase inline-flex space-x-1 lg:space-x-[0.28vw];

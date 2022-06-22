@@ -24,7 +24,7 @@
           <WorkStickyBar />
         </div>
         <LazyCertifications />
-        <Footer />
+        <LazyFooter />
       </div>
     </transition>
   </div>

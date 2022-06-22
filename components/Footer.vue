@@ -1,7 +1,7 @@
 <template>
   <footer>
-    <div class="footer-container">
-      <div class="top-left">
+    <div class="footer-container col-end  border-color  md:evenly">
+      <div class="top-left border-color">
         <div class="socials overflow-hidden">
           <h2 class="translate-y-[10vw]" data-cursor="-opaque">SOCIALS</h2>
         </div>
@@ -29,12 +29,12 @@
         </div>
       </div>
 
-      <div class="connect">
+      <div class="connect border-color center">
         <p data-cursor="-exclusion"></p>
       </div>
     </div>
 
-    <div class="copyright">
+    <div class="copyright start border-color">
       <a href="https://centuryleap.com" data-cursor="-sm -opaque"></a>
     </div>
   </footer>
@@ -115,10 +115,10 @@ export default {
 <style lang="postcss" scoped>
 footer {
   > .footer-container {
-    @apply font-kugile col-end md:flex-row md:evenly px-6 md:px-[3.35vw] border-color border-t;
+    @apply font-kugile md:flex-row px-6 md:px-[3.35vw] border-t;
 
     > .top-left {
-      @apply w-full h-full space-y-7 md:space-y-[3.35vw] pl-6 lg:pl-[3.35vw] pt-16 md:pt-[8.3vw] pb-14 md:pb-[15vw] border-l border-r-0 md:border-r border-color;
+      @apply w-full h-full space-y-7 md:space-y-[3.35vw] pl-6 lg:pl-[3.35vw] pt-16 md:pt-[8.3vw] pb-14 md:pb-[15vw] border-l border-r-0 md:border-r;
     }
   }
 }
@@ -127,7 +127,7 @@ footer {
 }
 
 .connect {
-  @apply block w-full h-full py-12 md:py-0 md:pt-[3vw] center border-l border-t md:border-0 border-color;
+  @apply block w-full h-full py-12 md:py-0 md:pt-[3vw] border-l border-t md:border-0;
 
   p {
     @apply text-xl text-center md:text-[2.13vw] md:leading-[3.5vw];
@@ -135,7 +135,7 @@ footer {
 }
 
 .copyright {
-  @apply px-6 border-t start py-8 md:px-[3.35vw] md:pt-[3.8vw] md:pb-[3.2vw] border-color;
+  @apply px-6 border-t  py-8 md:px-[3.35vw] md:pt-[3.8vw] md:pb-[3.2vw];
 
   a {
     @apply font-sans text-[10px] lg:text-[0.93vw] md:leading-[1.6vw] uppercase;
