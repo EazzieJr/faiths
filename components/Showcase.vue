@@ -49,7 +49,7 @@
       >
         <div
           data-cursor-text="view project"
-          class="container-decoy w-full h-[50vh] min-h-[20rem] md:h-[39vw] relative bg-[#CDFFCC]"
+          class="container-decoy w-full h-[50vh] min-h-[20rem] md:h-[39vw] relative bg-[#CDFFCC] metrobox"
         >
           <div class="p-6 text-decoy md:p-[3.35vw]">
             <p class="first">MetroBox</p>
@@ -152,6 +152,10 @@ export default {
       stagger: 0.1,
       y: 0,
       ease: "power3.inOut",
+      onComplete: () => {
+        ScrollTrigger.refresh()
+          console.log("completed");
+      },
     });
 
     gsap.to(".products-text", {
