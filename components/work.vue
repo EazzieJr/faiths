@@ -3,7 +3,7 @@
     <div class="pt-[9.4vw] border-color border-l">
       <div class="pl-6 md:pl-[3.35vw] work-anime">
         <div class="overflow-hidden">
-          <h2 class="work-text translate-y-[10vw]">
+          <h2 class="work-text translate-y-[12vw]">
             WORKs
             <span class="inline-block w-[2rem] lg:w-[4vw] ml-[1vw]">
               <img src="svg/staricon.svg" alt="" />
@@ -12,7 +12,7 @@
         </div>
 
         <div class="overflow-hidden">
-          <h2 class="experience-text translate-y-[10vw]">EXPERIENCE</h2>
+          <h2 class="experience-text translate-y-[12vw]">EXPERIENCE</h2>
         </div>
       </div>
 

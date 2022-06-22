@@ -3,11 +3,11 @@
     <div class="pt-16 md:pt-[8.3vw]">
       <div class="pb-4 md:pb-[1.675vw]">
         <div class="overflow-hidden">
-          <h2 class="product translate-y-[10vw]">Product</h2>
+          <h2 class="product translate-y-[12vw]">Product</h2>
         </div>
 
         <div class="overflow-hidden">
-          <h2 class="showcase translate-y-[10vw]">showcase</h2>
+          <h2 class="showcase translate-y-[12vw]">showcase</h2>
         </div>
       </div>
 
