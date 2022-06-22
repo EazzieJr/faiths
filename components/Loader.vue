@@ -1,31 +1,33 @@
 <template>
-    <div class="w-full h-screen bg-white dark:bg-[#0B0B0B] center">
-      <div class="logo">
-        <img
-          class="w-8 lg:w-[3.8vw] scale-[2] md:translate-x-[2.5vw]"
-          :src="[
-            darkMode
-              ? 'images/loader-logo-dark.png'
-              : 'images/loader-logo-white.png',
-          ]"
-          alt=""
-        />
+  <div class="w-full h-screen bg-white dark:bg-[#0B0B0B] center">
+    <div class="logo">
+      <img
+        class="w-8 lg:w-[3.8vw] scale-[2] translate-x-7 md:translate-x-[2.5vw]"
+        :src="[
+          darkMode
+            ? 'images/loader-logo-dark.png'
+            : 'images/loader-logo-white.png',
+        ]"
+        alt=""
+      />
 
-        <div class="texts">
-          <div class="block overflow-hidden">
-            <p class="md:translate-y-[5vw]">Faith</p>
-          </div>
+      <div class="texts">
+        <div class="block overflow-hidden">
+          <p class="translate-y-[5vw]">Faith</p>
+        </div>
 
-          <div class="block overflow-hidden">
-            <p class="md:translate-y-[5vw]">olaniyi</p>
-          </div>
+        <div class="block overflow-hidden">
+          <p class="translate-y-[5vw]">olaniyi</p>
         </div>
       </div>
     </div>
+  </div>
 </template>
 
 <script>
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 import { mapState, mapMutations } from "vuex";
 export default {
   name: "Loader",
@@ -64,6 +66,17 @@ export default {
       ease: "power3.in",
     });
 
+    ScrollTrigger.matchMedia({
+      "(max-width: 767px)": function () {
+        gsap.to(".logo", {
+          delay: 5,
+          duration: 1.5,
+          scale: 1,
+          x: "28px",
+          ease: "power3.out",
+        });
+      },
+    });
     gsap.to("img", {
       delay: 5,
       duration: 1.5,
