@@ -403,4 +403,8 @@ export default {
 .big-hero div {
   perspective: 1000px;
 }
+
+div::-webkit-scrollbar {
+  opacity: 0;
+}
 </style>
