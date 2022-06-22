@@ -23,7 +23,7 @@
 
           <WorkStickyBar />
         </div>
-        <Certifications />
+        <LazyCertifications />
         <LazyFooter />
       </div>
     </transition>

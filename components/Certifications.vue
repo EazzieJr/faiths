@@ -131,7 +131,7 @@ export default {
         end: "center 230",
         pin: true,
         scrub: true,
-        // markers: false,
+        markers: true,
         pinSpacing: false,
       },
     });
