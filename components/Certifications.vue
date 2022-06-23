@@ -124,7 +124,7 @@ export default {
   },
 
   mounted() {
-    // ScrollTrigger.refresh()
+    ScrollTrigger.refresh()
     // console.log("refreshed")
     
     gsap.to(".one", {
