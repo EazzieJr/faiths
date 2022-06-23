@@ -1,5 +1,5 @@
 <template>
-  <div class="px-6 lg:px-[3.35vw]">
+  <div class="px-6 lg:px-[3.35vw] refresh">
     <div class="pt-16 md:pt-[8.3vw]">
       <div class="pb-4 md:pb-[1.675vw]">
         <div class="overflow-hidden">
@@ -141,6 +141,17 @@ gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
 export default {
   mounted() {
+    gsap.to(".refresh", {
+      scrollTrigger: {
+        trigger: ".refresh",
+        start: "top bottom",
+        end: "top 90%",
+        markers: true,
+      },
+
+      onComplete: ScrollTrigger.refresh()
+    })
+    
     gsap.to(".product, .showcase", {
       scrollTrigger: {
         trigger: ".product",
