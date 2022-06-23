@@ -186,7 +186,7 @@ export default {
       // },
     });
 
-    gsap.to(".dronw", {
+    gsap.to(".drone", {
       scrollTrigger: {
         trigger: ".drone",
         start: "center center",
