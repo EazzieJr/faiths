@@ -14,7 +14,7 @@
 
         <WorkHeader />
 
-        <div class="flex items-start justify-start border-[#333333] border-t">
+        <!-- <div class="flex items-start justify-start border-[#333333] border-t">
           <div class="w-[86.78vw] border-color border-r">
             <LazyWork />
 
@@ -22,7 +22,7 @@
           </div>
 
           <WorkStickyBar />
-        </div>
+        </div> -->
         <LazyCertifications />
         <LazyFooter />
       </div>
