@@ -152,10 +152,10 @@ export default {
       stagger: 0.1,
       y: 0,
       ease: "power3.inOut",
-      onComplete: () => {
-        ScrollTrigger.update()
-          console.log("completed");
-      },
+      // onComplete: () => {
+      //   ScrollTrigger.update()
+      //     console.log("completed");
+      // },
     });
 
     gsap.to(".products-text", {
@@ -170,9 +170,9 @@ export default {
         value: "here are some of the products i’ve lead, shipped and ideated",
       },
       duration: 2,
-      onComplete: () => {
-        ScrollTrigger.update();
-      },
+      // onComplete: () => {
+      //   ScrollTrigger.update();
+      // },
     });
   },
 };

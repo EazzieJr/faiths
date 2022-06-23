@@ -124,8 +124,8 @@ export default {
   },
 
   mounted() {
-    ScrollTrigger.refresh()
-    console.log("refreshed")
+    // ScrollTrigger.refresh()
+    // console.log("refreshed")
     
     gsap.to(".one", {
       scrollTrigger: {
@@ -137,7 +137,7 @@ export default {
         scrub: true,
         markers: true,
         pinSpacing: false,
-        onEnter: () => { ScrollTrigger.refresh(); console.log("i don refresh") }
+        // onEnter: () => { ScrollTrigger.refresh(); console.log("i don refresh") }
       },
     });
 

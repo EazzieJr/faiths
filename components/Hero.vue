@@ -184,9 +184,9 @@ export default {
             },
             duration: 2,
             opacity: 1,
-            onComplete: () => {
-              ScrollTrigger.refresh();
-            },
+            // onComplete: () => {
+            //   ScrollTrigger.refresh();
+            // },
           });
         },
 
@@ -202,7 +202,7 @@ export default {
               stagger: 0.1,
               ease: "ease out",
               onComplete: () => {
-                ScrollTrigger.update();
+                ScrollTrigger.refresh();
               },
             }
           )
@@ -211,10 +211,11 @@ export default {
                 value: "Consistency in growth, perfection in sustainability.",
               },
               duration: 2,
+              delay: -0.5,
               opacity: 1,
-              onComplete: () => {
-                ScrollTrigger.refresh();
-              },
+              // onComplete: () => {
+              //   ScrollTrigger.refresh();
+              // },
             })
             .to(".big-hero div", {
               overflow: "visible",
@@ -247,7 +248,7 @@ export default {
               start: "center center",
               scrub: 1,
               pin: ".bottom-hero",
-              anticipatePin: -1,
+              // anticipatePin: -1,
               markers: false,
             },
             duration: 5,
