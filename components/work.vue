@@ -39,7 +39,7 @@
           </div> -->
 
           <div
-            class="col-center -mt-[70%] sm:-mt-[35%] md:-mt-[42vw] z-10 relative md:space-y-[13.3vw]"
+            class="col-center  z-10 relative md:space-y-[13.3vw]"
           >
             <Project
               class="spak"
