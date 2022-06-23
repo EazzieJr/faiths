@@ -39,6 +39,9 @@ import Certifications from "../components/Certifications.vue";
 import Loader from "../components/Loader.vue";
 import { mapState, mapMutations } from "vuex";
 import AOS from 'aos'
+import { gsap } from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 export default {
   name: "IndexPage",
@@ -50,6 +53,10 @@ export default {
   },
 
   mounted() {
+    setInterval(() => {
+      ScrollTrigger.refresh();
+    console.log("refreshed")
+    }, 5000);
     new Cursor();
     // console.log(Cursor);
     new Magnetic();
