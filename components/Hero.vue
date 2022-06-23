@@ -53,7 +53,7 @@
               <!-- Hero headder for 768px upwards -->
               <div
                 data-cursor="-opaque"
-                class="big-hero relative hidden md:block"
+                class="big-hero relative hidden min-w-full min-h-[36.3vw] border md:block"
               >
                 <div class="overflow-y-hidden">
                   <h1 class="first translate-y-[20vw]">founder & CEO,</h1>
