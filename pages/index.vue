@@ -1,11 +1,11 @@
 <template>
   <div>
     <transition name="page" mode="out-in">
-      <Loader v-if="loading" />
+      <Loader v-show="loading" />
     </transition>
 
     <transition name="page" mode="out-in">
-      <div v-if="!loading">
+      <div v-show="!loading">
         <div class="flex border-color border-b">
           <LazyHero class="md:min-w-[96.65vw]" />
 
@@ -53,10 +53,10 @@ export default {
   },
 
   mounted() {
-    setInterval(() => {
-      ScrollTrigger.refresh();
-    console.log("refreshed")
-    }, 5000);
+    // setInterval(() => {
+    //   ScrollTrigger.refresh();
+    // console.log("refreshed")
+    // }, 5000);
     new Cursor();
     // console.log(Cursor);
     new Magnetic();
