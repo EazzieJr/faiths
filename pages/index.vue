@@ -9,10 +9,10 @@
         <div class="flex border-color border-b">
           <LazyHero class="md:min-w-[96.65vw]" />
 
-          <ScrollDown />
+          <LazyScrollDown />
         </div>
 
-        <WorkHeader />
+        <LazyWorkHeader />
 
         <div class="flex items-start justify-start border-[#333333] border-t">
           <div class="w-[86.78vw] border-color border-r">
@@ -21,7 +21,7 @@
             <LazyShowcase />
           </div>
 
-          <WorkStickyBar />
+          <LazyWorkStickyBar />
         </div>
         <LazyCertifications />
         <LazyFooter />
