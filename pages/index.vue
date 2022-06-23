@@ -7,24 +7,24 @@
     <!-- <transition name="page" mode="out-in"> -->
       <div v-if="!loading">
         <div class="flex border-color border-b">
-          <LazyHero class="md:min-w-[96.65vw]" />
+          <Hero class="md:min-w-[96.65vw]" />
 
-          <LazyScrollDown />
+          <ScrollDown />
         </div>
 
-        <LazyWorkHeader />
+        <WorkHeader />
 
         <div class="flex items-start justify-start border-[#333333] border-t">
           <div class="w-[86.78vw] border-color border-r">
-            <LazyWork />
+            <Work />
 
-            <LazyShowcase />
+            <Showcase />
           </div>
 
-          <LazyWorkStickyBar />
+          <WorkStickyBar />
         </div>
-        <LazyCertifications />
-        <LazyFooter />
+        <Certifications />
+        <Footer />
       </div>
     <!-- </transition> -->
   </div>
