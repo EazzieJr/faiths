@@ -146,7 +146,7 @@ export default {
         trigger: ".refresh",
         start: "top bottom",
         end: "top 90%",
-        markers: true,
+        markers: false,
       },
 
       onComplete: ScrollTrigger.refresh(),
@@ -191,7 +191,7 @@ export default {
         trigger: ".drone",
         start: "center center",
         end: "top 90%",
-        markers: true,
+        markers: false,
       },
 
       onComplete: () => { ScrollTrigger.refresh(); console.log("refreshed") },

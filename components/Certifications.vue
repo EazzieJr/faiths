@@ -136,7 +136,7 @@ export default {
         end: "center 230",
         pin: true,
         scrub: true,
-        markers: true,
+        markers: false,
         id: 'lmao',
         pinSpacing: false,
         // onEnter: () => { ScrollTrigger.refresh(); console.log("i don refresh") }
@@ -150,7 +150,7 @@ export default {
         // endTrigger: ".two",
         end: "center 30%",
         scrub: true,
-        markers: true,
+        markers: false,
         id: "rotate",
         onEnter: () => {
           this.change(".pam img", "svg/focused.svg");
