@@ -5,7 +5,7 @@
     </transition>
 
     <transition name="page" mode="out-in">
-      <div v-show="!loading">
+      <div v-if="!loading">
         <div class="flex border-color border-b">
           <LazyHero class="md:min-w-[96.65vw]" />
 
