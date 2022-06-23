@@ -24,7 +24,7 @@
             <img class="dark:invert" src="svg/staricon.svg" alt="" />
           </div>
 
-          <!-- <div
+          <div
             class="px-6 md:ml-[3.35vw] md:pl-0 lg:pr-0 sticky top-[25%] xl:top-[12.5%] sm:w-[39.94vw] md:max-w-none md:w-[40vw] md:min-h-[46.9vw] md:z-20"
           >
             <div class="test" data-cursor-text="view case">
@@ -36,10 +36,10 @@
                 />
               </a>
             </div>
-          </div> -->
+          </div>
 
           <div
-            class="col-center  z-10 relative md:space-y-[13.3vw]"
+            class="col-center -mt-[70%] sm:-mt-[35%] md:-mt-[42vw] z-10 relative md:space-y-[13.3vw]"
           >
             <Project
               class="spak"

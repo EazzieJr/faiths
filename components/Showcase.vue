@@ -92,11 +92,11 @@
                 2022
               </p>
             </div>
-            <!-- <img
+            <img
               src="images/spicy.jpg"
               alt="Spicy"
               class="h-full w-full object-cover object-left-top"
-            /> -->
+            />
           </div>
 
           <div
@@ -121,11 +121,11 @@
               </p>
             </div>
 
-            <!-- <img
+            <img
               src="images/drone.png"
               alt="Spicy"
               class="h-full w-full object-cover object-left-top"
-            /> -->
+            />
           </div>
         </div>
       </div>
