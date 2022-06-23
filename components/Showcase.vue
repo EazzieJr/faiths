@@ -101,7 +101,7 @@
 
           <div
             data-cursor-text="view project"
-            class="container-decoy h-[40vh] min-h-[20rem] md:h-[34vw] w-full sm:w-[67.06%] relative"
+            class="container-decoy h-[40vh] min-h-[20rem] md:h-[34vw] w-full sm:w-[67.06%] relative drone"
           >
             <div
               class="absolute text-decoy text-left top-4 left-4 md:top-[1.67vw] md:left-[1.67vw] z-10"
@@ -149,9 +149,9 @@ export default {
         markers: true,
       },
 
-      onComplete: ScrollTrigger.refresh()
-    })
-    
+      onComplete: ScrollTrigger.refresh(),
+    });
+
     gsap.to(".product, .showcase", {
       scrollTrigger: {
         trigger: ".product",
@@ -184,6 +184,17 @@ export default {
       // onComplete: () => {
       //   ScrollTrigger.update();
       // },
+    });
+
+    gsap.to(".dronw", {
+      scrollTrigger: {
+        trigger: ".drone",
+        start: "center center",
+        end: "top 90%",
+        markers: true,
+      },
+
+      onComplete: () => { ScrollTrigger.refresh(); console.log("refreshed") },
     });
   },
 };
