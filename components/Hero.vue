@@ -241,7 +241,9 @@ export default {
               ease: "power3.out",
             }
           );
+        },
 
+        "(min-width: 1024px)": function () {
           const scroll = gsap.timeline({
             scrollTrigger: {
               trigger: ".bottom-hero",
