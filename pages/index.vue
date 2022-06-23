@@ -6,11 +6,11 @@
 
     <transition name="page" mode="out-in">
       <div v-if="!loading">
-        <div class="flex border-color border-b">
+        <!-- <div class="flex border-color border-b">
           <LazyHero class="md:min-w-[96.65vw]" />
 
           <ScrollDown />
-        </div>
+        </div> -->
 
         <WorkHeader />
 
