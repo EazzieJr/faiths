@@ -202,7 +202,7 @@ export default {
               stagger: 0.1,
               ease: "ease out",
               onComplete: () => {
-                ScrollTrigger.refresh();
+                ScrollTrigger.update();
               },
             }
           )

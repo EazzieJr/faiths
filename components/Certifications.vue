@@ -103,11 +103,12 @@
 </template>
 
 <script>
+import Certificate from "./Certificate.vue";
+import aosMixin from "~/mixins/aos";
 import gsap from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
-import Certificate from "./Certificate.vue";
-import aosMixin from "~/mixins/aos";
+
 export default {
   mixins: [aosMixin],
   data() {
@@ -123,6 +124,9 @@ export default {
   },
 
   mounted() {
+    ScrollTrigger.refresh()
+    console.log("refreshed")
+    
     gsap.to(".one", {
       scrollTrigger: {
         trigger: ".one",
@@ -133,6 +137,7 @@ export default {
         scrub: true,
         markers: true,
         pinSpacing: false,
+        onEnter: () => { ScrollTrigger.refresh(); console.log("i don refresh") }
       },
     });
 
