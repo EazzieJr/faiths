@@ -124,6 +124,7 @@ export default {
   },
 
   mounted() {
+    window.scrollTrigger = ScrollTrigger
     ScrollTrigger.refresh()
     // console.log("refreshed")
     
@@ -136,6 +137,7 @@ export default {
         pin: true,
         scrub: true,
         markers: true,
+        id: 'lmao',
         pinSpacing: false,
         // onEnter: () => { ScrollTrigger.refresh(); console.log("i don refresh") }
       },
@@ -148,7 +150,7 @@ export default {
         // endTrigger: ".two",
         end: "center 30%",
         scrub: true,
-        markers: false,
+        markers: true,
         id: "rotate",
         onEnter: () => {
           this.change(".pam img", "svg/focused.svg");
