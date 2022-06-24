@@ -92,10 +92,10 @@
         </div>
       </div>
 
-      <div class="bottom-hero pt-[2vw] lg:pb-[30px] xl:pb-0">
+      <div class="bottom-hero pt-[2vw] md:pt-[20vw] lg:pt-[2vw] lg:pb-[30px] xl:pb-0">
         <div class="bottom-hero-container pr-6 md:pr-[3.35vw]">
           <div
-            class="texts-image-small lg:hidden space-y-6 md:space-y-[1.6vw] lg:pr-[5vw]"
+            class="texts-image-small lg:hidden space-y-6 md:space-y-[1.6vw] lg:pr-[5vw] overflow-hidden"
           >
             <p
               class="explainer md:pr-[20vw] lg:pr-0 first-text"
@@ -339,7 +339,7 @@ export default {
     @apply border-r pb-6 md:pb-[3.35vw];
 
     > .top-hero {
-      @apply sm:h-screen pb-40 sm:pb-0;
+      @apply sm:h-screen md:h-auto lg:h-screen pb-40 sm:pb-0;
 
       > .top-hero-container {
         @apply h-full;
