@@ -344,7 +344,7 @@ export default {
       > .top-hero-container {
         @apply h-full;
         > .top-hero-contents {
-          @apply md:flex items-start pt-20 md:pt-[9vw] h-full;
+          @apply md:flex items-start pt-20 md:pt-[20vw] lg:pt-[9vw] h-full;
           /* > .hero-texts {
             > .big-hero {
               @apply hidden md:block;
