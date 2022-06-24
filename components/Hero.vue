@@ -143,7 +143,7 @@
 
           <div
             data-cursor="-exclusion -xl"
-            class="relative image hidden lg:block md:w-2/5 lg:min-w-[40vw] hero-pin-image overflow-hidden"
+            class="relative image hidden lg:block md:w-2/5 lg:min-w-[40vw] lg:min-h-[46.5vw] border hero-pin-image overflow-hidden"
           >
             <img class="w-full invert" src="images/faith.png" alt="" />
           </div>
