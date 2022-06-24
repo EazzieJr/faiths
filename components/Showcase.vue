@@ -37,7 +37,7 @@
             id="asterisk"
             data-magnetic
           >
-            <img src="svg/asterisk.svg" class="dark:invert w-3 md:w-[1.1vw]" />
+            <img src="svg/asterisk.svg" data-magnetic class="dark:invert w-3 md:w-[1.1vw]" />
           </span>
 
           <span class="inline-block">2022</span>
