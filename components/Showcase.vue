@@ -157,7 +157,7 @@ export default {
         trigger: ".product",
         start: "top bottom",
         // scrub: true,
-        toggleActions: "play none none reverse",
+        // toggleActions: "play none none reverse",
       },
       duration: 1.5,
       stagger: 0.1,
