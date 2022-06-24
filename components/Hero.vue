@@ -92,7 +92,7 @@
         </div>
       </div>
 
-      <div class="bottom-hero pt-[2vw]">
+      <div class="bottom-hero pt-[2vw] lg:pb-[30px] xl:pb-0">
         <div class="bottom-hero-container pr-6 md:pr-[3.35vw]">
           <div
             class="texts-image-small lg:hidden space-y-6 md:space-y-[1.6vw] lg:pr-[5vw]"
@@ -137,7 +137,7 @@
             </p>
           </div>
 
-          <div class="texts-big hidden lg:block lg:pt-[5vw] lg:pr-[5vw]">
+          <div class="texts-big hidden lg:block xl:pt-[5vw] lg:pr-[5vw]">
             <p class="explainer pr-0" data-cursor="-exclusion"></p>
           </div>
 
@@ -375,7 +375,7 @@ export default {
 } */
 
 .bottom-hero-container {
-  @apply md:flex justify-between items-center xl:items-start;
+  @apply md:flex justify-between items-center lg:items-start;
 }
 
 .texts-image {
