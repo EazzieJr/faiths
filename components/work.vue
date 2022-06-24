@@ -134,9 +134,9 @@ export default {
     gsap.to(".work-text, .experience-text", {
       scrollTrigger: {
         trigger: ".work-text",
-        start: "center bottom",
+        start: "top bottom",
         // scrub: true,
-        toggleActions: "play none none reverse",
+        // toggleActions: "play none none reverse",
       },
       duration: 1.5,
       stagger: 0.1,
@@ -220,9 +220,9 @@ export default {
         value: "I am very acquainted with success",
       },
       duration: 2,
-      onComplete: () => {
-        ScrollTrigger.refresh();
-      },
+      // onComplete: () => {
+      //   ScrollTrigger.refresh();
+      // },
     });
   },
   components: { Project },
