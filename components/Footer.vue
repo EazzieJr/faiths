@@ -3,7 +3,7 @@
     <div class="footer-container col-end border-color md:evenly">
       <div class="top-left border-color">
         <div class="socials overflow-hidden">
-          <h2 class="translate-y-[10vw]" data-cursor="-opaque">SOCIALS</h2>
+          <h2 class="" data-cursor="-opaque">SOCIALS</h2>
         </div>
 
         <div
@@ -70,23 +70,23 @@ export default {
       new Magnetic(this);
     });
 
-    gsap.to(".socials h2", {
-      scrollTrigger: {
-        trigger: ".socials h2",
-        start: "center bottom",
-        // scrub: true,
-        toggleActions: "play none none reverse",
-      },
-      duration: 1.5,
-      stagger: 0.1,
-      y: 0,
-      ease: "power3.inOut",
-    });
+    // gsap.to(".socials h2", {
+    //   scrollTrigger: {
+    //     trigger: ".socials h2",
+    //     start: "center bottom",
+    //     // scrub: true,
+    //     toggleActions: "play none none reverse",
+    //   },
+    //   duration: 1.5,
+    //   stagger: 0.1,
+    //   y: 0,
+    //   ease: "power3.inOut",
+    // });
 
     gsap.to(".connect p", {
       scrollTrigger: {
         trigger: ".connect",
-        start: "center 80%",
+        start: "center 90%",
       },
 
       text: {
