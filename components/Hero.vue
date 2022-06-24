@@ -201,9 +201,9 @@ export default {
               opacity: 1,
               stagger: 0.1,
               ease: "ease out",
-              onComplete: () => {
-                ScrollTrigger.refresh();
-              },
+              // onComplete: () => {
+              //   ScrollTrigger.refresh();
+              // },
             }
           )
             .to(".write-in", {
@@ -213,9 +213,9 @@ export default {
               duration: 2,
               delay: -0.5,
               opacity: 1,
-              // onComplete: () => {
-              //   ScrollTrigger.refresh();
-              // },
+              onComplete: () => {
+                ScrollTrigger.refresh();
+              },
             })
             .to(".big-hero div", {
               overflow: "visible",
