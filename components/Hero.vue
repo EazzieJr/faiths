@@ -72,7 +72,7 @@
                 </div>
               </div>
 
-              <p class="explainer write-in font-light opacity-0"></p>
+              <p class="explainer write-in font-light opacity-0 h-[42px] md:h-auto"></p>
             </div>
 
             <div

@@ -14,7 +14,7 @@
       <div
         class="col-between md:between gap-6 text-sm font-light mb-6 md:mb-[3.35vw]"
       >
-        <div class="start space-x-6 sm:space-x-10">
+        <div class="start space-x-6 sm:space-x-10 h-10 md:h-auto">
           <span
             class="products-text text-[10px] md:text-[0.95vw] font-light uppercase"
           >
