@@ -1,6 +1,6 @@
 export const state = () => ({
   darkMode: false,
-  loading: false,
+  loading: true,
 })
 
 export const mutations = {
