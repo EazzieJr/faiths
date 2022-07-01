@@ -2,7 +2,7 @@
   <div data-aos="fade-up" data-aos-duration="1000" class="certificate start-start space-x-4 md:space-x-[1.675vw]">
     <img
       class="w-5 md:w-[1.6vw]"
-      :class="[darkMode ? 'filter invert' : '']"
+      :class="[darkMode ? 'invert-clone' : '']"
       :src="`svg/${src}.svg`"
       alt=""
     />
