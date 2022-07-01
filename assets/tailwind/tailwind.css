@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 @layer base {
+  .invert-clone {
+    filter: invert(1)  ;
+    -webkit-filter: invert(1)  ;
+}
+  
   html {
     @apply font-sans;
   }
