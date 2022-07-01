@@ -72,7 +72,9 @@
                 </div>
               </div>
 
-              <p class="explainer write-in font-light opacity-0 h-[42px] md:h-auto"></p>
+              <p
+                class="explainer write-in font-light opacity-0 h-[42px] md:h-auto"
+              ></p>
             </div>
 
             <div
@@ -92,7 +94,9 @@
         </div>
       </div>
 
-      <div class="bottom-hero pt-[2vw] md:pt-[20vw] lg:pt-[2vw] lg:pb-[30px] xl:pb-0">
+      <div
+        class="bottom-hero pt-[2vw] md:pt-[20vw] lg:pt-[2vw] lg:pb-[30px] xl:pb-0"
+      >
         <div class="bottom-hero-container pr-6 md:pr-[3.35vw]">
           <div
             class="texts-image-small lg:hidden space-y-6 md:space-y-[1.6vw] lg:pr-[5vw] overflow-hidden"
@@ -219,7 +223,9 @@ export default {
             .to(".big-hero div", {
               overflow: "visible",
             });
+        },
 
+        "(min-width: 1024px)": function () {
           gsap.to(
             ".big-hero .first, .big-hero .second, .big-hero .third, .big-hero .fourth, .small-h1 span",
             {
@@ -240,9 +246,6 @@ export default {
               ease: "power3.out",
             }
           );
-        },
-
-        "(min-width: 1024px)": function () {
           const scroll = gsap.timeline({
             scrollTrigger: {
               trigger: ".bottom-hero",
@@ -276,24 +279,28 @@ export default {
             duration: 5,
             onComplete: () => {
               ScrollTrigger.refresh();
-              console.log("pin refreeshed")
+              console.log("pin refreeshed");
             },
           });
         },
       });
-      document.querySelector(".circular-hero").addEventListener("mouseover", () => {
-        gsap.to(".circular-hero", {
-          duration: 0.5,
-          rotate: 45,
+      document
+        .querySelector(".circular-hero")
+        .addEventListener("mouseover", () => {
+          gsap.to(".circular-hero", {
+            duration: 0.5,
+            rotate: 45,
+          });
         });
-      })
 
-      document.querySelector(".circular-hero").addEventListener("mouseout", () => {
-        gsap.to(".circular-hero", {
-          duration: 0.5,
-          rotate: 0,
+      document
+        .querySelector(".circular-hero")
+        .addEventListener("mouseout", () => {
+          gsap.to(".circular-hero", {
+            duration: 0.5,
+            rotate: 0,
+          });
         });
-      })
     },
 
     toggleMode() {
