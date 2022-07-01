@@ -14,13 +14,21 @@
       <div
         class="col-between md:between gap-6 text-sm font-light mb-6 md:mb-[3.35vw]"
       >
-        <div class="start space-x-6 sm:space-x-10 h-10 md:h-auto">
+        <div class="start space-x-6 sm:space-x-10 h-10 md:h-auto overflow-hidden">
           <span
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            data-aos-delay="200"
             class="products-text text-[10px] md:text-[0.95vw] font-light uppercase"
           >
+            here are some of the products i’ve lead, shipped and ideated
           </span>
 
-          <span class="ml-10 w-6 md:w-[2.3vw] h-auto center">
+          <span
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            class="ml-10 w-6 md:w-[2.3vw] h-auto center"
+          >
             <img class="dark:invert" src="svg/arrow-icon.svg" alt="" />
           </span>
         </div>
@@ -37,7 +45,11 @@
             id="asterisk"
             data-magnetic
           >
-            <img src="svg/asterisk.svg" data-magnetic class="dark:invert w-3 md:w-[1.1vw]" />
+            <img
+              src="svg/asterisk.svg"
+              data-magnetic
+              class="dark:invert w-3 md:w-[1.1vw]"
+            />
           </span>
 
           <span class="inline-block">2022</span>
@@ -169,22 +181,22 @@ export default {
       // },
     });
 
-    gsap.to(".products-text", {
-      scrollTrigger: {
-        trigger: ".products-text",
-        start: "bottom bottom",
-        end: "bottom bottom",
-        markers: false,
-        toggleActions: "play none none reset",
-      },
-      text: {
-        value: "here are some of the products i’ve lead, shipped and ideated",
-      },
-      duration: 2,
-      // onComplete: () => {
-      //   ScrollTrigger.update();
-      // },
-    });
+    // gsap.to(".products-text", {
+    //   scrollTrigger: {
+    //     trigger: ".products-text",
+    //     start: "bottom bottom",
+    //     end: "bottom bottom",
+    //     markers: false,
+    //     toggleActions: "play none none reset",
+    //   },
+    //   text: {
+    //     value: "here are some of the products i’ve lead, shipped and ideated",
+    //   },
+    //   duration: 2,
+    //   // onComplete: () => {
+    //   //   ScrollTrigger.update();
+    //   // },
+    // });
 
     gsap.to(".drone", {
       scrollTrigger: {
@@ -194,7 +206,10 @@ export default {
         markers: false,
       },
 
-      onComplete: () => { ScrollTrigger.refresh(); console.log("refreshed") },
+      onComplete: () => {
+        ScrollTrigger.refresh();
+        console.log("refreshed");
+      },
     });
   },
 };

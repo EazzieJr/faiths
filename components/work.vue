@@ -92,12 +92,13 @@
       </div>
 
       <div
-        class="inline-flex items-center px-6 mt-[8.875rem] md:mt-[11vw] pb-6 lg:px-[3.35vw] md:pb-[3.35vw] overflow-hidden"
+        class="inline-flex items-center mx-6 mt-[8.875rem] md:mt-[11vw] pb-6 lg:mx-[3.35vw] md:pb-[3.35vw] overflow-hidden"
       >
-        <span class="text-[10px] md:text-[0.95vw] font-light success-text">
+        <span data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200" class="text-[10px] md:text-[0.95vw] font-light success-text">
+          I am very acquainted with success
         </span>
 
-        <span class="ml-10 w-6 md:w-[2.3vw] h-auto center">
+        <span data-aos="fade-right" data-aos-duration="1000" class="ml-10 w-6 md:w-[2.3vw] h-auto center">
           <img class="dark:invert" src="svg/arrow-icon.svg" alt="" />
         </span>
       </div>
@@ -208,22 +209,22 @@ export default {
       },
     });
 
-    gsap.to(".success-text", {
-      scrollTrigger: {
-        trigger: ".success-text",
-        start: "bottom bottom",
-        end: "bottom bottom",
-        markers: false,
-        toggleActions: "play none none reset",
-      },
-      text: {
-        value: "I am very acquainted with success",
-      },
-      duration: 2,
-      // onComplete: () => {
-      //   ScrollTrigger.refresh();
-      // },
-    });
+    // gsap.to(".success-text", {
+    //   scrollTrigger: {
+    //     trigger: ".success-text",
+    //     start: "bottom bottom",
+    //     end: "bottom bottom",
+    //     markers: false,
+    //     toggleActions: "play none none reset",
+    //   },
+    //   text: {
+    //     value: "I am very acquainted with success",
+    //   },
+    //   duration: 2,
+    //   // onComplete: () => {
+    //   //   ScrollTrigger.refresh();
+    //   // },
+    // });
   },
   components: { Project },
 };
