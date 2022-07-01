@@ -289,7 +289,6 @@ export default {
             duration: 5,
             onComplete: () => {
               ScrollTrigger.refresh();
-              console.log("pin refreeshed");
             },
           });
         },

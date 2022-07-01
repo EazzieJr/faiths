@@ -208,7 +208,6 @@ export default {
 
       onComplete: () => {
         ScrollTrigger.refresh();
-        console.log("refreshed");
       },
     });
   },
