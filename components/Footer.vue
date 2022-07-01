@@ -94,7 +94,7 @@ export default {
           <br />
           via mail at <br />
           <a data-cursor="-sm" href="mailto: hello@faitholaniyi.com"
-            >hello@faitholaniyi.com</a
+            >hello@faitholaniyi.net</a
           >`,
       },
       duration: 2,
