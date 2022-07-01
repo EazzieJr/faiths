@@ -21,7 +21,7 @@
           <div
             class="absolute left-[51.12vw] top-[14vw] w-6 lg:w-[1.58vw] rotate-45"
           >
-            <img class="dark:invert" src="svg/staricon.svg" alt="" />
+            <img class="dark:invert-clone" src="svg/staricon.svg" alt="" />
           </div>
 
           <div
@@ -86,7 +86,7 @@
 
         <div class="end pr-[9vw]">
           <div class="w-[5.7vw]">
-            <img class="dark:invert" src="svg/detailed-star.svg" alt="" />
+            <img class="dark:invert-clone" src="svg/detailed-star.svg" alt="" />
           </div>
         </div>
       </div>
@@ -94,12 +94,21 @@
       <div
         class="inline-flex items-center mx-6 mt-[8.875rem] md:mt-[11vw] pb-6 lg:mx-[3.35vw] md:pb-[3.35vw] overflow-hidden"
       >
-        <span data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200" class="text-[10px] md:text-[0.95vw] font-light success-text">
+        <span
+          data-aos="fade-right"
+          data-aos-duration="1000"
+          data-aos-delay="200"
+          class="text-[10px] md:text-[0.95vw] font-light success-text"
+        >
           I am very acquainted with success
         </span>
 
-        <span data-aos="fade-right" data-aos-duration="1000" class="ml-10 w-6 md:w-[2.3vw] h-auto center">
-          <img class="dark:invert" src="svg/arrow-icon.svg" alt="" />
+        <span
+          data-aos="fade-right"
+          data-aos-duration="1000"
+          class="ml-10 w-6 md:w-[2.3vw] h-auto center"
+        >
+          <img class="dark:invert-clone" src="svg/arrow-icon.svg" alt="" />
         </span>
       </div>
     </div>

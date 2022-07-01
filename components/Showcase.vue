@@ -14,7 +14,9 @@
       <div
         class="col-between md:between gap-6 text-sm font-light mb-6 md:mb-[3.35vw]"
       >
-        <div class="start space-x-6 sm:space-x-10 h-10 md:h-auto overflow-hidden">
+        <div
+          class="start space-x-6 sm:space-x-10 h-10 md:h-auto overflow-hidden"
+        >
           <span
             data-aos="fade-right"
             data-aos-duration="1000"
@@ -29,7 +31,7 @@
             data-aos-duration="1000"
             class="ml-10 w-6 md:w-[2.3vw] h-auto center"
           >
-            <img class="dark:invert" src="svg/arrow-icon.svg" alt="" />
+            <img class="dark:invert-clone" src="svg/arrow-icon.svg" alt="" />
           </span>
         </div>
 
@@ -48,7 +50,7 @@
             <img
               src="svg/asterisk.svg"
               data-magnetic
-              class="dark:invert w-3 md:w-[1.1vw]"
+              class="dark:invert-clone w-3 md:w-[1.1vw]"
             />
           </span>
 

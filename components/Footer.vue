@@ -23,7 +23,7 @@
             <span class="social-name">{{ social.name }}</span>
 
             <span class="w-8 md:min-w-[3.6vw]">
-              <img class="dark:invert" src="svg/arrow.svg" alt="" />
+              <img class="dark:invert-clone" src="svg/arrow.svg" alt="" />
             </span>
           </a>
         </div>

@@ -5,7 +5,7 @@
         <h2 class="relative">
           certifications
           <span>
-            <img class="dark:invert" src="svg/asterisk.svg" alt="" />
+            <img class="dark:invert-clone" src="svg/asterisk.svg" alt="" />
           </span>
         </h2>
       </div>
@@ -97,7 +97,7 @@
     </div>
 
     <div class="image">
-      <img class="dark:invert" src="svg/staricon.svg" alt="" />
+      <img class="dark:invert-clone" src="svg/staricon.svg" alt="" />
     </div>
   </section>
 </template>
@@ -124,10 +124,10 @@ export default {
   },
 
   mounted() {
-    window.scrollTrigger = ScrollTrigger
-    ScrollTrigger.refresh()
+    window.scrollTrigger = ScrollTrigger;
+    ScrollTrigger.refresh();
     // console.log("refreshed")
-    
+
     gsap.to(".one", {
       scrollTrigger: {
         trigger: ".one",
@@ -137,7 +137,7 @@ export default {
         pin: true,
         scrub: true,
         markers: false,
-        id: 'lmao',
+        id: "lmao",
         pinSpacing: false,
         // onEnter: () => { ScrollTrigger.refresh(); console.log("i don refresh") }
       },
