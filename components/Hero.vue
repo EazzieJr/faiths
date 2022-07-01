@@ -295,7 +295,7 @@ export default {
         },
       });
       document
-        .querySelector(".circular-hero, .circular-hero-small")
+        .querySelector(".circular-hero")
         .addEventListener("mouseover", () => {
           gsap.to(".circular-hero", {
             duration: 0.5,
@@ -304,7 +304,7 @@ export default {
         });
 
       document
-        .querySelector(".circular-hero, .circular-hero-small")
+        .querySelector(".circular-hero")
         .addEventListener("mouseout", () => {
           gsap.to(".circular-hero", {
             duration: 0.5,
