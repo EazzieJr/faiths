@@ -7,7 +7,7 @@
     </span>
 
     <span class="flex rotate-90 mt-[7vh] md:mt-[10vh] mx-auto">
-      <img class="scroll-img dark:invert" src="svg/arrow.svg" alt="" />
+      <img class="scroll-img dark:invert-[1]" src="svg/arrow.svg" alt="" />
     </span>
 
   </div>
