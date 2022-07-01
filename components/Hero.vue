@@ -78,10 +78,20 @@
             </div>
 
             <div
+              class="image-pin image end bg-white dark:bg-[#0B0B0B] opacity-0 lg:hidden"
+            >
+              <img
+                class="circular-hero-small w-28 md:min-w-[12vw] mix-blend-exclusion"
+                src="images/circular-hero.png"
+                alt=""
+              />
+            </div>
+
+            <div
               data-magnetic
               data-cursor="-opaque"
               data-cursor-stick="#img"
-              class="image-pin image end bg-white dark:bg-[#0B0B0B] opacity-0"
+              class="image-pin image bg-white dark:bg-[#0B0B0B] opacity-0 hidden lg:end"
             >
               <img
                 class="circular-hero w-28 md:min-w-[12vw] mix-blend-exclusion"
@@ -285,7 +295,7 @@ export default {
         },
       });
       document
-        .querySelector(".circular-hero")
+        .querySelector(".circular-hero, .circular-hero-small")
         .addEventListener("mouseover", () => {
           gsap.to(".circular-hero", {
             duration: 0.5,
@@ -294,7 +304,7 @@ export default {
         });
 
       document
-        .querySelector(".circular-hero")
+        .querySelector(".circular-hero, .circular-hero-small")
         .addEventListener("mouseout", () => {
           gsap.to(".circular-hero", {
             duration: 0.5,
