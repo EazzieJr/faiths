@@ -29,7 +29,7 @@
             </svg>
           </p>
 
-          <button class="w-5 lg:w-[1.7vw]" @click="toggleMode">
+          <button class="w-5 lg:w-[1.7vw] hover:rotate-45" @click="toggleMode">
             <img
               :src="[darkMode ? 'svg/light-theme.svg' : 'svg/dark-theme.svg']"
               class="theme-button w-5 lg:w-[1.7vw]"
@@ -82,7 +82,7 @@
               class="image-pin image end bg-white dark:bg-[#0B0B0B] opacity-0"
             >
               <img
-                class="circlular-hero w-28 md:min-w-[12vw] mix-blend-exclusion"
+                class="circular-hero w-28 md:min-w-[12vw] mix-blend-exclusion"
                 src="images/circular-hero.png"
                 alt=""
                 id="img"
@@ -161,7 +161,6 @@ import { TextPlugin } from "gsap/dist/TextPlugin";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(TextPlugin, ScrollTrigger);
 import { mapState, mapMutations } from "vuex";
-// let ClipCursor;
 
 export default {
   computed: {
@@ -282,6 +281,19 @@ export default {
           });
         },
       });
+      document.querySelector(".circular-hero").addEventListener("mouseover", () => {
+        gsap.to(".circular-hero", {
+          duration: 0.5,
+          rotate: 45,
+        });
+      })
+
+      document.querySelector(".circular-hero").addEventListener("mouseout", () => {
+        gsap.to(".circular-hero", {
+          duration: 0.5,
+          rotate: 0,
+        });
+      })
     },
 
     toggleMode() {
