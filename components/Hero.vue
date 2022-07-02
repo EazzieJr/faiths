@@ -11,7 +11,13 @@
         </div>
 
         <div class="right-container start">
-          <a href="/OLANIYI FAITH AYODEJI CV.pdf" download data-magnetic class="resume">
+          <a
+            data-cursor="-exclusion -sm"
+            href="/OLANIYI FAITH AYODEJI CV.pdf"
+            download
+            data-magnetic
+            class="resume"
+          >
             <span class="text-[10px] lg:text-[1.06vw]">resume</span>
 
             <svg
@@ -31,6 +37,7 @@
 
           <button class="w-5 lg:w-[1.7vw]" @click="toggleMode">
             <img
+              data-cursor="-exclusion -sm"
               :src="[darkMode ? 'svg/light-theme.svg' : 'svg/dark-theme.svg']"
               class="theme-button w-5 lg:w-[1.7vw]"
             />
