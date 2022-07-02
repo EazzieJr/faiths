@@ -11,7 +11,7 @@
         </div>
 
         <div class="right-container start">
-          <p data-magnetic class="resume">
+          <a href="/OLANIYI FAITH AYODEJI CV.pdf" download data-magnetic class="resume">
             <span class="text-[10px] lg:text-[1.06vw]">resume</span>
 
             <svg
@@ -27,7 +27,7 @@
                 stroke-width="1"
               />
             </svg>
-          </p>
+          </a>
 
           <button class="w-5 lg:w-[1.7vw] hover:rotate-45" @click="toggleMode">
             <img
