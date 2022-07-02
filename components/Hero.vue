@@ -29,7 +29,7 @@
             </svg>
           </a>
 
-          <button class="w-5 lg:w-[1.7vw] hover:rotate-45" @click="toggleMode">
+          <button class="w-5 lg:w-[1.7vw]" @click="toggleMode">
             <img
               :src="[darkMode ? 'svg/light-theme.svg' : 'svg/dark-theme.svg']"
               class="theme-button w-5 lg:w-[1.7vw]"

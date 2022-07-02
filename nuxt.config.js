@@ -34,11 +34,11 @@ export default {
       { hid: 'twitter:description', name: 'twitter:description', content: "FAITH OLANIYI IS A CREATIVE GENERALIST SPECIALIZED IN PRODUCT AND BUSINESS MANAGEMENT. HE IS AN ATYPICAL THINKER AND PROBLEM SOLVER WHO CONSTANTLY GENERATES INNOVATIVE SOLUTIONS TO COMPLEX PROBLEMS." },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon/favicon.ico' },
-      { rel: 'icon', type: 'image/png', sizes: "32x32", href: '/favicon/favicon-32x32.png' },
-      { rel: 'icon', type: 'image/png', sizes: "16x16", href: '/favicon/favicon-16x16.png' },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/png', sizes: "32x32", href: '/favicon-32x32.png' },
+      { rel: 'icon', type: 'image/png', sizes: "16x16", href: '/favicon-16x16.png' },
       { rel: 'manifest', href: 'site.web</link>manifest' },
-      { rel: 'apple-touch-icon', type: 'image/png', href: '/favicon/apple-touch-icon.png' }
+      { rel: 'apple-touch-icon', type: 'image/png', href: '/apple-touch-icon.png' }
     ]
   },
 
