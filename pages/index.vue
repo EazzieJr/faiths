@@ -1,31 +1,31 @@
 <template>
   <div>
     <!-- <transition name="page" mode="out-in"> -->
-      <Loader v-if="loading" />
+    <Loader v-if="loading" />
     <!-- </transition> -->
 
     <!-- <transition name="page" mode="out-in"> -->
-      <div v-if="!loading">
-        <div class="flex border-color border-b">
-          <Hero class="md:min-w-[96.65vw]" />
+    <div v-if="!loading">
+      <div class="flex border-color border-b">
+        <Hero class="md:min-w-[96.65vw]" />
 
-          <ScrollDown />
-        </div>
-
-        <WorkHeader />
-
-        <div class="flex items-start justify-start border-[#333333] border-t">
-          <div class="w-[86.78vw] border-color border-r">
-            <Work />
-
-            <Showcase />
-          </div>
-
-          <WorkStickyBar />
-        </div>
-        <Certifications />
-        <Footer />
+        <ScrollDown />
       </div>
+
+      <WorkHeader />
+
+      <div class="flex items-start justify-start border-[#333333] border-t">
+        <div class="w-[86.78vw] border-color border-r">
+          <Work />
+
+          <Showcase />
+        </div>
+
+        <WorkStickyBar />
+      </div>
+      <Certifications />
+      <Footer />
+    </div>
     <!-- </transition> -->
   </div>
 </template>
@@ -38,7 +38,7 @@ import aosMixin from "~/mixins/aos";
 import Certifications from "../components/Certifications.vue";
 import Loader from "../components/Loader.vue";
 import { mapState, mapMutations } from "vuex";
-import AOS from 'aos'
+import AOS from "aos";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
@@ -49,32 +49,39 @@ export default {
   components: { Certifications, Loader },
 
   computed: {
-    ...mapState(["loading"]),
+    ...mapState(["loading", "darkMode"]),
+  },
+
+  methods: {
+    ...mapMutations(["toggleDarkMode"]),
   },
 
   mounted() {
-    // setInterval(() => {
-    //   ScrollTrigger.refresh();
-    // console.log("refreshed")
-    // }, 5000);
+    const html = document.querySelector("html");
+
+    if (localStorage.getItem("darkMode") === "true") {
+      html.classList.add("dark");
+      this.toggleDarkMode();
+    }
+
     new Cursor();
-    // console.log(Cursor);
     new Magnetic();
     $("[data-magnetic]").each(function () {
       new Magnetic(this);
     });
+  },
 
-    // document.querySelectorAll('img').forEach(img => {
-    //   img.addEventListener('load', () => {
-    //     AOS.refresh();
-    //   });
-    // });
+  watch: {
+    darkMode(val) {
+      localStorage.setItem("darkMode", val);
+    },
   },
 };
 </script>
 
 <style lang="postcss">
-.page-enter-from, .page-leave-to {
+.page-enter-from,
+.page-leave-to {
   opacity: 0;
 }
 /* 
@@ -82,7 +89,8 @@ export default {
   opacity: 1;
 } */
 
-.page-enter-active, .page-leave-active {
+.page-enter-active,
+.page-leave-active {
   transition: all 1s ease;
 }
 </style>
